@@ -1,0 +1,491 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Cem Cumali – Projekte</title>
+<meta name="description" content="Cem Cumali, Senior IT: die AI-Workbench, eine selbst betriebene Plattform, auf der KI-Agenten echte IT-Arbeit erledigen.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,300..700,50&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --nacht:#0d1b2a; --tief:#081320; --kai:#132538; --linie:#233a52;
+  --laterne:#f2b45a; --meer:#4cc9b0; --pergament:#ede3cf; --nebel:#93a4b8;
+  --serif:"Fraunces",Georgia,serif; --sans:"Hanken Grotesk",system-ui,sans-serif;
+  --rand:clamp(16px,5vw,72px); --breit:1240px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--nacht);color:var(--pergament);font:400 17px/1.6 var(--sans);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img,video{display:block;max-width:100%}
+figure{margin:0}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--laterne);outline-offset:3px;border-radius:4px}
+h1,h2,h3{font-family:var(--serif);font-weight:500;font-variation-settings:"SOFT" 50;margin:0;letter-spacing:-.01em}
+p{margin:0}
+
+/* Hero: die Stadt bei Nacht – das eine laute Element */
+.hero{position:relative;min-height:100svh;display:flex;align-items:flex-end;isolation:isolate;overflow:hidden}
+.hero video,.hero .poster{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2}
+.hero::after{content:"";position:absolute;inset:0;z-index:-1;
+  background:linear-gradient(180deg,rgba(8,19,32,.35) 0%,rgba(8,19,32,0) 30%,rgba(8,19,32,.15) 55%,rgba(13,27,42,.92) 86%,var(--nacht) 100%)}
+.hero-text{width:100%;max-width:var(--breit);margin:0 auto;padding:0 var(--rand) clamp(40px,8vh,96px)}
+.hero h1{font-size:clamp(56px,11vw,168px);line-height:.9;font-weight:400;letter-spacing:-.035em;
+  opacity:0;transform:translateY(18px);animation:auf 1.4s .3s cubic-bezier(.2,.7,.2,1) forwards}
+.hero .rolle{margin-top:18px;font-size:clamp(18px,2vw,22px);color:var(--laterne);font-weight:500;
+  opacity:0;animation:auf 1.2s .9s forwards}
+.hero .satz{margin-top:14px;max-width:31em;text-wrap:pretty;font-size:clamp(17px,1.6vw,19px);color:var(--pergament);opacity:0;animation:auf 1.2s 1.2s forwards}
+@keyframes auf{to{opacity:1;transform:none}}
+
+/* Kapitel */
+main>section{max-width:var(--breit);margin:0 auto;padding:clamp(72px,11vw,150px) var(--rand) 0}
+.kopf{max-width:38em}
+.kopf h2{font-size:clamp(34px,4.6vw,60px);line-height:1.02}
+.kopf p{margin-top:18px;text-wrap:pretty;color:var(--nebel);font-size:clamp(17px,1.5vw,19px)}
+.kopf p strong{color:var(--pergament);font-weight:500}
+.kopf .werkzeug{margin-top:20px;color:var(--nebel);font-size:14px}
+.kopf .urheber{margin-top:16px;padding:12px 16px;border-left:2px solid var(--laterne);background:var(--kai);border-radius:0 8px 8px 0;font-size:15.5px;color:var(--pergament)}
+.werkzeug span+span::before{content:" / ";color:var(--linie)}
+
+/* Bewohner */
+.bewohner{margin-top:48px;display:grid;grid-template-columns:repeat(7,1fr);gap:22px 16px;list-style:none;padding:0}
+.bewohner li{position:relative}
+.bewohner button{all:unset;cursor:pointer;display:block;width:100%;border-radius:14px;overflow:hidden;aspect-ratio:2/3;position:relative;background:var(--kai);
+  box-shadow:0 0 0 1px var(--linie)}
+.bewohner button:focus-visible{outline:2px solid var(--laterne);outline-offset:3px}
+.bewohner img,.bewohner video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.bewohner video{opacity:0;transition:opacity .4s}
+.bewohner li.spielt video{opacity:1}
+.bewohner li.spielt button{box-shadow:0 0 0 1px var(--farbe),0 12px 40px -12px var(--farbe)}
+.bewohner h3{margin-top:12px;font-size:20px;line-height:1.1}
+.bewohner .t{font-size:14px;color:var(--farbe);font-weight:600;margin-top:3px}
+.bewohner .r{font-size:14.5px;line-height:1.45;color:var(--nebel);margin-top:6px}
+.kann{list-style:none;padding:0;margin:34px 0 0;display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:18px 32px}
+.kann li{font-size:15px;line-height:1.5;color:var(--nebel);border-top:1px solid var(--linie);padding-top:12px}
+.kann strong{display:block;color:var(--laterne);font-weight:600;margin-bottom:2px}
+.hinweis{margin-top:22px;font-size:14px;color:var(--nebel)}
+.hero .satz strong{color:var(--laterne);font-weight:600}
+/* Worum es geht: Klartext für alle, die keine Agenten kennen */
+.kann.worum{grid-template-columns:repeat(3,1fr);gap:18px 40px;margin-top:40px}
+.kann.worum li{font-size:16px;line-height:1.6}
+.kann.worum strong{font-family:var(--serif);font-weight:500;font-size:22px;margin-bottom:8px}
+.legende{margin-top:44px;padding:22px 26px;border-radius:12px;background:var(--kai);box-shadow:0 0 0 1px var(--linie)}
+.legende-titel{font-family:var(--serif);font-size:20px;margin-bottom:14px}
+.legende dl{margin:0;display:grid;grid-template-columns:repeat(3,1fr);gap:12px 32px}
+.legende dt{color:var(--laterne);font-weight:600;font-size:15px}
+.legende dd{margin:2px 0 0;color:var(--nebel);font-size:15px}
+@media (max-width:900px){.kann.worum,.legende dl{grid-template-columns:1fr}}
+
+/* Bildschirme */
+.schirm{margin-top:44px;border-radius:12px;overflow:hidden;background:var(--tief);
+  box-shadow:0 0 0 1px var(--linie),0 40px 80px -40px rgba(0,0,0,.8)}
+.schirm img{width:100%;height:auto}
+.netzlive{width:100%;aspect-ratio:1920/1116;object-fit:cover}
+.paar{margin-top:18px;display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.paar .schirm{margin-top:0}
+.trio{grid-template-columns:repeat(3,1fr)}
+.vier{grid-template-columns:repeat(4,1fr)}
+.hoch{grid-template-columns:repeat(4,1fr);align-items:start}
+.clip{width:100%;height:auto;background:#000}
+#sipahi>.schirm+.schirm,#sipahi>.schirm+.paar,#sipahi>.paar+.paar,#zican>.paar+.schirm{margin-top:18px}
+.paar>.schirm{margin-top:0}
+figcaption a{color:var(--laterne);text-decoration:none}
+figcaption{padding:12px 16px;font-size:14px;color:var(--nebel);border-top:1px solid var(--linie);background:var(--kai)}
+.zoom{all:unset;cursor:zoom-in;display:block}
+
+.hochpaar{grid-template-columns:1fr 1fr;align-items:start}
+.unter{margin-top:clamp(56px,7vw,96px)}
+.unter h3{font-size:clamp(26px,3vw,36px);line-height:1.1}
+.unter p{margin-top:12px;max-width:38em;color:var(--nebel);text-wrap:pretty}
+/* Werkstatt: Tageszeiten */
+.zeiten{margin-top:44px}
+.zeiten .bild{position:relative;aspect-ratio:2048/896;border-radius:12px;overflow:hidden;box-shadow:0 0 0 1px var(--linie)}
+.zeiten .bild img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .9s ease}
+.zeiten .bild img.an{opacity:1}
+.wahl{margin-top:16px;display:flex;gap:8px;flex-wrap:wrap}
+.wahl button{font:500 15px var(--sans);color:var(--nebel);background:transparent;border:1px solid var(--linie);border-radius:999px;padding:8px 18px;cursor:pointer}
+.wahl button[aria-pressed=true]{color:var(--nacht);background:var(--laterne);border-color:var(--laterne)}
+.ereignisse{margin-top:18px;display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.ereignisse figure{margin:0;border-radius:12px;overflow:hidden;box-shadow:0 0 0 1px var(--linie);background:var(--tief)}
+.ereignisse video{width:100%;aspect-ratio:1216/512;object-fit:cover}
+
+/* Weitere Projekte */
+.weitere{margin-top:44px;display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:0 40px}
+.weitere div{padding:22px 0;border-top:1px solid var(--linie)}
+.weitere h3{font-size:22px}
+.weitere p{margin-top:6px;color:var(--nebel);font-size:15.5px}
+
+/* Schluss */
+footer{max-width:var(--breit);margin:clamp(90px,12vw,160px) auto 0;padding:0 var(--rand) 56px}
+footer .ende{font-family:var(--serif);font-size:clamp(28px,3.6vw,46px);line-height:1.1;max-width:18em}
+footer .ende+p{margin-top:18px;color:var(--nebel);max-width:36em}
+footer nav{margin-top:28px;display:flex;gap:26px;flex-wrap:wrap}
+footer nav a{color:var(--laterne);text-decoration:none;font-weight:500;border-bottom:1px solid rgba(242,180,90,.4);padding-bottom:2px}
+footer nav a:hover{border-color:var(--laterne)}
+footer small{display:block;margin-top:64px;color:var(--nebel);font-size:13px}
+
+/* Großansicht */
+dialog{border:0;padding:0;background:transparent;max-width:96vw;max-height:94vh}
+dialog::backdrop{background:rgba(5,12,20,.9)}
+dialog img{max-width:96vw;max-height:94vh;width:auto;border-radius:8px}
+
+@media (max-width:1100px){.bewohner{grid-template-columns:repeat(4,1fr)}.trio,.vier,.hoch{grid-template-columns:1fr 1fr}}
+@media (max-width:760px){
+  .paar,.ereignisse{grid-template-columns:1fr}
+  .hochpaar{grid-template-columns:1fr 1fr}
+  .vier,.hoch{grid-template-columns:1fr 1fr}
+  .bewohner{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:14px;margin-left:calc(-1*var(--rand));margin-right:calc(-1*var(--rand));padding:0 var(--rand) 8px}
+  .bewohner li{flex:0 0 62%;scroll-snap-align:start}
+}
+@media (prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important}
+  .hero h1,.hero .rolle,.hero .satz{opacity:1;transform:none}
+  html{scroll-behavior:auto}
+}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <img class="poster" src="medien/stadt/nacht.webp" alt="">
+  <video autoplay muted loop playsinline poster="medien/stadt/nacht.webp" aria-hidden="true">
+    <source src="medien/stadt/loop_nacht.mp4" type="video/mp4">
+  </video>
+  <div class="hero-text">
+    <h1>Cem Cumali</h1>
+    <p class="rolle">Senior IT für Infrastruktur, Microsoft 365 und Security</p>
+    <p class="satz">Zu Hause betreibe ich die <strong>AI-Workbench</strong>: eine Plattform, auf der KI&#8209;Agenten echte IT-Arbeit erledigen. Die Stadt ist nur die Oberfläche. Dahinter laufen eigene Server, ein eigenes Netz und ein Team aus Agenten mit festen Aufgaben.</p>
+  </div>
+</header>
+
+<main>
+
+<section id="worum">
+  <div class="kopf">
+    <h2>Worum es geht</h2>
+    <p>KI-Agenten sind Programme, die Aufgaben selbstständig erledigen: Code schreiben, Server prüfen, recherchieren, Dokumente sortieren. Sie werden gerade Teil der IT in Unternehmen. Ich betreibe so ein Team schon heute im Alltag, auf eigener Hardware, mit allem, was dazugehört.</p>
+  </div>
+  <ul class="kann worum">
+    <li><strong>Was es ist</strong>Eine Plattform für 13 KI-Agenten: Aufträge annehmen, verteilen, erledigen, prüfen. Ich sage, was ich brauche. Ein Admin-Agent verteilt die Arbeit ans Team und prüft jedes Ergebnis, bevor es bei mir ankommt.</li>
+    <li><strong>Warum ich es baue</strong>Über Agenten zu lesen reicht nicht. Ich will wissen, wie man sie sicher und bezahlbar betreibt: Wer darf was, was kostet es, was passiert bei Fehlern, wer kontrolliert. Das lernt man nur im echten Betrieb.</li>
+    <li><strong>Was davon im Job zählt</strong>Dieselben Grundlagen wie in jedem Unternehmen: Virtualisierung, Netz mit VLANs, Backups, Zugänge und Rechte, Monitoring, automatische Selbsttests. Dazu die Erfahrung, wo KI hilft und wo ein einfaches Skript besser ist.</li>
+  </ul>
+  <div class="legende">
+    <p class="legende-titel">Sieht aus wie ein Spiel? Das steckt dahinter:</p>
+    <dl>
+      <div><dt>Ein Haus in der Stadt</dt><dd>ein Container auf einem Proxmox-Server</dd></div>
+      <div><dt>Ein Haus leuchtet</dt><dd>dieser Agent arbeitet gerade</dd></div>
+      <div><dt>Ein Auftrag</dt><dd>ein Ticket mit Freigabe und Prüfung</dd></div>
+      <div><dt>Der Leuchtturm</dt><dd>die Admin-Konsole zu InfraClaude</dd></div>
+      <div><dt>Goldene Bögen</dt><dd>echter Netzverkehr, live gemessen</dd></div>
+      <div><dt>Die Ablage</dt><dd>Dateiaustausch mit den Agenten</dd></div>
+    </dl>
+  </div>
+</section>
+
+<section id="zentrale">
+  <div class="kopf">
+    <h2>Die Zentrale</h2>
+    <p>Eine Startseite für alles. Die Stadt ist die Oberfläche: Jeder Agent hat ein Haus, das leuchtet, sobald er arbeitet. Ein Klick auf den Leuchtturm öffnet ein echtes Terminal zu <strong>InfraClaude</strong>, meinem Admin-Agenten, mitten im Bild. Er nimmt meine Wünsche an, verteilt Aufträge ans Team und prüft jedes Ergebnis, bevor es bei mir landet.</p>
+    <p class="werkzeug"><span>Python</span><span>PostgreSQL mit pgvector</span><span>MCP</span><span>ttyd</span><span>Canvas</span></p>
+  </div>
+  <figure class="schirm"><video class="clip" muted loop playsinline preload="none" data-auto poster="medien/zentrale/stadt_infraclaude.jpg" aria-label="Die Zentrale bei Nacht: ein Klick auf den Leuchtturm öffnet das Terminal von InfraClaude"><source src="medien/zentrale/stadt_infraclaude.mp4" type="video/mp4"></video>
+    <figcaption>„hey infra, was geht?“ – das Terminal läuft im Stadtbild weiter, auch wenn das Fenster zu ist.</figcaption></figure>
+  <div class="paar">
+    <figure class="schirm"><video class="clip" muted loop playsinline preload="none" data-auto poster="medien/zentrale/stadt_musik.jpg" aria-label="Radio und Musik direkt in der Zentrale"><source src="medien/zentrale/stadt_musik.mp4" type="video/mp4"></video>
+      <figcaption>Radio und Musik: Sender wählen oder ein Lied suchen, es läuft gleich in der Stadt.</figcaption></figure>
+    <figure class="schirm"><video class="clip" muted loop playsinline preload="none" data-auto poster="medien/zentrale/stadt_vector_haus.jpg" aria-label="Vector-Fenster und Lichtsteuerung"><source src="medien/zentrale/stadt_vector_haus.mp4" type="video/mp4"></video>
+      <figcaption>Vector und das Haus: Was der Roboter hört und sagt, dazu Licht und Fernseher.</figcaption></figure>
+  </div>
+  <div class="unter">
+    <h3>Der Leitstand</h3>
+    <p>Der zweite Monitor steht hochkant. Dort laufen alle Reiter untereinander: Puls von Internet und Servern, Projekte, Aufträge, Recherche und das Netz. Die <strong>Ablage</strong> daneben ist der Tisch, über den ich mit jedem Agenten Dateien tausche, ohne dass dafür ein Sprachmodell rechnet.</p>
+  </div>
+  <div class="paar hochpaar">
+    <figure class="schirm"><video class="clip" muted loop playsinline preload="none" data-auto poster="medien/zentrale/leitstand.jpg" aria-label="Leitstand im Hochformat: Agenten, Projekte, Recherche und Netz"><source src="medien/zentrale/leitstand.mp4" type="video/mp4"></video>
+      <figcaption>Leitstand: Agenten, Verbrauch, Projekte, Recherche, Netz.</figcaption></figure>
+    <figure class="schirm"><video class="clip" muted loop playsinline preload="none" data-auto poster="medien/zentrale/ablage.jpg" aria-label="Ablage mit Bildern, Videos und Programmen der Agenten"><source src="medien/zentrale/ablage.mp4" type="video/mp4"></video>
+      <figcaption>Ablage: über 700 Bilder, Videos und Programme der Agenten.</figcaption></figure>
+  </div>
+</section>
+
+<section id="portale">
+  <div class="kopf">
+    <h2>Hinter zwei Portalen</h2>
+    <p>Aus der Stadt führen zwei Tore in eigene Welten. In der <strong>Gasse</strong> laufen die Chat-Agenten als Figuren durch eine regnerische Altstadt, eine Missionstafel zeigt, wer wach ist und wer schläft. In der <strong>Schmiede</strong> sitzen die Coding-Agenten an ihren Rechnern, und die Wandschirme zeigen live, was sie gerade schreiben.</p>
+    <p class="werkzeug"><span>three.js</span><span>animierte 3D-Figuren</span><span>Live-Daten aus der Plattform</span></p>
+  </div>
+  <figure class="schirm"><video class="clip" muted loop playsinline preload="none" data-auto poster="medien/zentrale/portale.jpg" aria-label="Rundgang durch Gasse und Schmiede"><source src="medien/zentrale/portale.mp4" type="video/mp4"></video>
+    <figcaption>Durchs Portal in die Gasse, dann in die Schmiede und zurück zur Stadt.</figcaption></figure>
+</section>
+
+<section id="bewohner">
+  <div class="kopf">
+    <h2>Die Bewohner</h2>
+    <p>Dreizehn Agenten, jeder mit fester Rolle. <strong>InfraClaude</strong> ist der Chef: Er verteilt die Aufträge, die anderen arbeiten zu. Chat-Agenten erreiche ich per Telegram, Coding-Agenten bauen Apps und Webseiten, Iris malt und filmt auf dem KI-PC.</p>
+  </div>
+  <ul class="bewohner" id="liste"></ul>
+  <p class="hinweis">Porträt antippen oder mit der Maus darüberfahren, dann wird es lebendig.</p>
+</section>
+
+<section id="recherche">
+  <div class="kopf">
+    <h2>Gedächtnis und Recherche</h2>
+    <p>Was ein Agent lernt, landet als Text im gemeinsamen Werkzeugkasten: Fähigkeiten, Fakten, Fehler und Berichte, durchsuchbar per semantischer Suche. Braucht einer mehr, stellt er eine Frage, und der Recherche-Dienst liest das Netz und schreibt einen Bericht mit Quellen, Kurzfazit und Empfehlungen.</p>
+    <p class="werkzeug"><span>Git und Markdown</span><span>Obsidian</span><span>GPT Researcher</span><span>SearXNG</span><span>lokale Embeddings</span></p>
+  </div>
+  <figure class="schirm"><video class="clip" muted loop playsinline preload="none" data-auto poster="medien/zentrale/wissen.jpg" aria-label="Wissensgraph aller Agenten in Obsidian"><source src="medien/zentrale/wissen.mp4" type="video/mp4"></video>
+    <figcaption>Das Gedächtnis aller Agenten als Graph: jeder Punkt eine Notiz, jede Linie ein Verweis.</figcaption></figure>
+  <div class="paar">
+    <figure class="schirm"><button class="zoom" aria-label="Groß anzeigen"><img src="medien/shots/z27c-t-recherche.png" alt="Reiter Recherche mit Eingabefeld und fertigen Berichten" loading="lazy" width="1440" height="1000"></button></figure>
+    <figure class="schirm"><button class="zoom" aria-label="Groß anzeigen"><img src="medien/shots/z27c-bericht.png" alt="Fertiger Recherche-Bericht mit Kurzfazit und Empfehlungen" loading="lazy" width="1200" height="1000"></button></figure>
+  </div>
+</section>
+
+<section id="netz">
+  <div class="kopf">
+    <h2>Das Netz, live</h2>
+    <p>Vom Internet bis zum letzten Container: Die Zentrale zeichnet mit, was gerade durchs Haus fließt. Wenn ein Agent arbeitet, läuft ein goldener Bogen zu seinem Haus.</p>
+    <p class="werkzeug"><span>UniFi-API</span><span>Proxmox-API</span><span>Canvas</span><span>eigene Gerätebilder</span></p>
+  </div>
+  <figure class="schirm"><video class="netzlive" muted loop playsinline preload="none" poster="medien/shots/netz_live.jpg" data-auto aria-label="Live-Netzansicht: Datenströme vom Internet über Router und Switch zu zwei Proxmox-Servern, ihren Containern und dem WLAN"><source src="medien/shots/netz_live.mp4" type="video/mp4"></video>
+    <figcaption>Live aus der Zentrale: Jeder Punkt ist echter Verkehr, jede Figur ein Agent in seinem Container.</figcaption></figure>
+</section>
+
+<section id="kaan">
+  <div class="kopf">
+    <h2>K.A.A.N., der Hausverwalter</h2>
+    <p>Ein Jarvis fürs Wohnzimmer, auch auf dem iPad. Man spricht mit ihm, er erkennt die Sprache lokal und antwortet mit Stimme. Nebenbei hat er das ganze Haus im Blick.</p>
+    <p class="werkzeug"><span>Whisper</span><span>Text-to-Speech</span><span>UniFi-API</span><span>Proxmox-API</span><span>nginx</span></p>
+  </div>
+  <ul class="kann">
+    <li><strong>Internet</strong>Leitung, Ping, Durchsatz und Datenverbrauch des Monats</li>
+    <li><strong>Zweiter Router</strong>Geräte, VPN-Standort, Last und Temperatur</li>
+    <li><strong>Server</strong>CPU, RAM und Platte beider Proxmox-Server mit allen Gästen</li>
+    <li><strong>Agenten</strong>Jeder Agent und jede Werkbank mit Status und Auslastung</li>
+    <li><strong>Smart Home</strong>Licht dimmen, Fernseher an und aus, YouTube aufs TV</li>
+    <li><strong>Radio</strong>35 türkische und deutsche Sender, direkt abspielbar</li>
+    <li><strong>Wetter und Himmel</strong>Fünf-Tage-Vorschau, Sonnenauf- und -untergang, Mondphase</li>
+    <li><strong>Erinnerungen</strong>Termine und Familienfeste, Hinweise der Agenten wie der Morgen-Brief</li>
+    <li><strong>Ticker</strong>Nachrichten auf Deutsch und Türkisch, Lira-Kurs und Goldpreis</li>
+    <li><strong>Vector</strong>Der kleine Roboter hängt mit dran und lässt sich von hier öffnen</li>
+  </ul>
+  <figure class="schirm"><button class="zoom" aria-label="Groß anzeigen"><img src="medien/shots/kaan.png" alt="K.A.A.N.-Oberfläche mit Netzwerk, Proxmox-Auslastung, Wetter, Smart Home und Radio" loading="lazy" width="1440" height="900"></button></figure>
+</section>
+
+<section id="health">
+  <div class="kopf">
+    <h2>Health Monitor</h2>
+    <p>Smartwatch und Handy senden ihre Daten an einen eigenen Server. Daraus entsteht ein persönliches Gesundheits-Dashboard mit Schlaf, Schritten und Puls.</p>
+    <p class="werkzeug"><span>Android</span><span>Wear OS</span><span>Web-Dashboard</span></p>
+  </div>
+  <figure class="schirm"><button class="zoom" aria-label="Groß anzeigen"><img src="medien/shots/health.png" alt="Health Monitor mit Körpermodell, Schlafphasen und Schritten der letzten 30 Tage" loading="lazy" width="1440" height="900"></button></figure>
+</section>
+
+<section id="aibroker">
+  <div class="kopf">
+    <h2>AI Broker</h2>
+    <p>Ein Research-Board für Krypto, Aktien, ETFs und türkische Werte. Jede Nacht bewertet ein Team aus Rollen jedes Asset und begründet sein Urteil: Marktlage, Chancen, Warnungen und die eigene Trefferquote. Ein öffentlicher Teil läuft als Übungsdepot mit echten Kursen und eigenem Login. Ausdrücklich keine Anlageberatung.</p>
+    <p class="werkzeug"><span>Python</span><span>Codex</span><span>Headless-Browser</span><span>Cron</span><span>Supabase</span></p>
+  </div>
+  <figure class="schirm"><button class="zoom" aria-label="Groß anzeigen"><img src="medien/shots/aibroker-dunkel.png" alt="AI-Broker-Übersicht mit Angst-und-Gier-Index, Altcoin-Saison, Marktbreite und Leitindizes" loading="lazy" width="1440" height="900"></button></figure>
+</section>
+
+<section id="web">
+  <div class="kopf">
+    <h2>Fürs Netz gebaut</h2>
+    <p>Zwei Seiten, die öffentlich laufen. Die <strong>Lernplattform</strong> ist für die Klausurvorbereitung in der Familie entstanden: drei Fächer mit über 300 Aufgaben, Spickzetteln und Probeklausur, ohne Konto. Dazu mein <strong>Bewerbungsprofil</strong> mit Werdegang und Projekten.</p>
+    <p class="werkzeug"><span>Astro</span><span>Vercel</span></p>
+  </div>
+  <div class="paar">
+    <figure class="schirm"><button class="zoom" aria-label="Groß anzeigen"><img src="medien/shots/lernplattform-2.png" alt="Lernplattform Mathematik 1 mit Fortschritt, Kapiteln und Abfragen" loading="lazy" width="1440" height="900"></button>
+      <figcaption>Lernplattform, hier Mathematik 1</figcaption></figure>
+    <figure class="schirm"><button class="zoom" aria-label="Groß anzeigen"><img src="medien/shots/profil.png" alt="Bewerbungsprofil von Cem Cumali mit Foto und Kennzahlen" loading="lazy" width="1440" height="900"></button>
+      <figcaption><a href="https://profilcem.vercel.app">Bewerbungsprofil</a></figcaption></figure>
+  </div>
+</section>
+
+<section id="werkstatt">
+  <div class="kopf">
+    <h2>Aus meiner <span style="white-space:nowrap">KI-Werkstatt</span></h2>
+    <p>Die Stadt, die Porträts und die Gerätebilder entstehen auf einem eigenen KI-PC mit lokalen Bild- und Videomodellen. Für jede Tageszeit gibt es ein eigenes Bild, dazu kurze Ereignisse, die in der Zentrale abgespielt werden.</p>
+    <p class="werkzeug"><span>ComfyUI</span><span>Qwen Image</span><span>lokale Videomodelle</span><span>eigene GPU</span></p>
+  </div>
+  <div class="zeiten">
+    <div class="bild" id="zeitbild">
+      <img src="medien/stadt/morgen.webp" alt="Die Stadt am Morgen" data-z="morgen" loading="lazy">
+      <img src="medien/stadt/tag.webp" alt="Die Stadt am Tag" data-z="tag" loading="lazy">
+      <img src="medien/stadt/abend.webp" alt="Die Stadt am Abend" data-z="abend" loading="lazy" class="an">
+      <img src="medien/stadt/nacht.webp" alt="Die Stadt bei Nacht" data-z="nacht" loading="lazy">
+    </div>
+    <div class="wahl" role="group" aria-label="Tageszeit">
+      <button data-z="morgen" aria-pressed="false">Morgen</button>
+      <button data-z="tag" aria-pressed="false">Tag</button>
+      <button data-z="abend" aria-pressed="true">Abend</button>
+      <button data-z="nacht" aria-pressed="false">Nacht</button>
+    </div>
+  </div>
+  <div class="ereignisse">
+    <figure><video muted loop playsinline preload="none" poster="medien/stadt/nacht.webp" data-auto><source src="medien/stadt/ereignis_schiff_nacht.mp4" type="video/mp4"></video><figcaption>Ein Schiff läuft ein</figcaption></figure>
+    <figure><video muted loop playsinline preload="none" poster="medien/stadt/nacht.webp" data-auto><source src="medien/stadt/ereignis_feuerwerk_nacht.mp4" type="video/mp4"></video><figcaption>Feuerwerk</figcaption></figure>
+    <figure><video muted loop playsinline preload="none" poster="medien/stadt/abend.webp" data-auto><source src="medien/stadt/ereignis_gewitter_abend.mp4" type="video/mp4"></video><figcaption>Gewitter</figcaption></figure>
+  </div>
+</section>
+
+<section id="llm">
+  <div class="kopf">
+    <h2>Sprachmodelle im eigenen Haus</h2>
+    <p>Die Agenten arbeiten mit Cloud-Modellen. Für den Fall, dass ein Anbieter ausfällt oder ein Limit greift, liegen auf dem KI-PC <strong>eigene Modelle als Reserve</strong> bereit. Sie laufen über eine Schnittstelle, die die Agenten schon kennen. Ein Chat-Agent lief testweise komplett lokal, mit Werkzeugaufrufen.</p>
+    <p class="werkzeug"><span>llama.cpp, selbst für CUDA gebaut</span><span>GGUF-Quantisierung</span><span>OpenAI-kompatible API</span><span>RTX 4070, 12 GB</span></p>
+  </div>
+  <ul class="kann">
+    <li><strong>Qwen 3.6 · 35B (MoE)</strong>Läuft als Reserve-Server: liest gut 2.000 Token pro Sekunde ein und schreibt rund 55 pro Sekunde, Werkzeugaufrufe geprüft.</li>
+    <li><strong>Qwen 3.8 · 27B</strong>In drei Größen von 9 bis 17 GB vermessen, mit und ohne Multi-Token-Vorhersage.</li>
+    <li><strong>Bonsai 2 · 27B</strong>Zweiter Reserve-Server mit 64.000 Token Kontext, auf schnelles Einlesen langer Agenten-Prompts getrimmt.</li>
+    <li><strong>Xing 4.0 · 29B</strong>Neues Coding-Modell, wenige Tage nach Erscheinen mit eigenem llama.cpp-Zweig lauffähig gemacht.</li>
+    <li><strong>Qwen 3.8 Flash-Next</strong>Ein 2-Bit-Riese mit über 60 GB: läuft, zeigt aber, wo der Prozessor zum Engpass wird.</li>
+    <li><strong>Was hängen blieb</strong>Multi-Token-Vorhersage lohnt nur, wenn das Modell nicht ganz auf die Karte passt: plus 27 Prozent beim großen, minus 40 Prozent beim kleinen.</li>
+  </ul>
+</section>
+
+<section id="sipahi">
+  <div class="kopf">
+    <h2>Sipahi: Kino von der eigenen Grafikkarte</h2>
+    <p>Ein Film über osmanische Reiter, Einstellung für Einstellung mit lokalen Bild- und Videomodellen gebaut: Drehbuch, Bilder, Bewegung, Ton und Schnitt. Aus der Zeichnung des Reiters entstand außerdem ein 3D-Modell, damit die Figur in jeder Szene gleich aussieht.</p>
+    <p class="urheber">Die Figur des Sipahi hat <strong>Zeki Algün</strong> gezeichnet und digitalisiert; alle Rechte an der Figur liegen bei ihm. Filme, Szenen und 3D-Modell habe ich auf Grundlage seiner Figur gebaut.</p>
+    <p class="werkzeug"><span>ComfyUI</span><span>lokale Videomodelle</span><span>Hunyuan3D</span><span>Blender</span><span>ffmpeg</span></p>
+  </div>
+  <figure class="schirm "><video class="clip" controls preload="none" poster="medien/werkstatt/sipahi_trailer.jpg"><source src="medien/werkstatt/sipahi_trailer.mp4" type="video/mp4"></video><figcaption>Trailer, 34 Sekunden. Mit Ton.</figcaption></figure>
+  <figure class="schirm"><button class="zoom" aria-label="Groß anzeigen"><img src="medien/werkstatt/sipahi_kontaktbogen.jpg" alt="Kontaktbogen mit 60 Einstellungen aus Akt 1" loading="lazy"></button><figcaption>Akt 1 als Kontaktbogen: 60 Einstellungen von der Ebene bis zum Zweikampf.</figcaption></figure>
+  <div class="paar trio">
+    <figure class="schirm "><video class="clip" controls preload="none" poster="medien/werkstatt/sipahi_akt1.jpg"><source src="medien/werkstatt/sipahi_akt1.mp4" type="video/mp4"></video><figcaption>Akt 1, gut 6 Minuten</figcaption></figure>
+    <figure class="schirm "><video class="clip" controls preload="none" poster="medien/werkstatt/son_osmanli.jpg"><source src="medien/werkstatt/son_osmanli.mp4" type="video/mp4"></video><figcaption>Son Osmanlı</figcaption></figure>
+    <figure class="schirm "><video class="clip" controls preload="none" poster="medien/werkstatt/letzter_krieger.jpg"><source src="medien/werkstatt/letzter_krieger.mp4" type="video/mp4"></video><figcaption>Der letzte Krieger</figcaption></figure>
+  </div>
+  <div class="paar vier">
+    <figure class="schirm "><video class="clip" muted loop playsinline preload="none" data-auto poster="medien/werkstatt/sipahi_3d_rundum.jpg"><source src="medien/werkstatt/sipahi_3d_rundum.mp4" type="video/mp4"></video><figcaption>3D-Modell, rundum</figcaption></figure>
+    <figure class="schirm"><button class="zoom" aria-label="Groß anzeigen"><img src="medien/werkstatt/sipahi_3d_front.jpg" alt="3D-Modell des Reiters von vorn" loading="lazy"></button><figcaption>Von vorn</figcaption></figure>
+    <figure class="schirm"><button class="zoom" aria-label="Groß anzeigen"><img src="medien/werkstatt/sipahi_3d_seite.jpg" alt="3D-Modell des Reiters von der Seite" loading="lazy"></button><figcaption>Von der Seite</figcaption></figure>
+    <figure class="schirm"><button class="zoom" aria-label="Groß anzeigen"><img src="medien/werkstatt/sipahi_3d_rueck.jpg" alt="3D-Modell des Reiters von hinten" loading="lazy"></button><figcaption>Von hinten</figcaption></figure>
+  </div>
+  <div class="paar trio">
+    <figure class="schirm"><button class="zoom" aria-label="Groß anzeigen"><img src="medien/werkstatt/sipahi6_a.jpg" alt="Sechs Reiter vor einem Steintor, Variante A" loading="lazy"></button><figcaption>Sechserbild, Variante A</figcaption></figure>
+    <figure class="schirm"><button class="zoom" aria-label="Groß anzeigen"><img src="medien/werkstatt/sipahi6_echt.jpg" alt="Sechs Reiter vor einem Steintor, fotorealistisch" loading="lazy"></button><figcaption>Fotorealistisch</figcaption></figure>
+    <figure class="schirm"><button class="zoom" aria-label="Groß anzeigen"><img src="medien/werkstatt/sipahi6_tor.jpg" alt="Reiterformation vor einem osmanischen Tor" loading="lazy"></button><figcaption>Formation am Tor</figcaption></figure>
+  </div>
+</section>
+
+<section id="zican">
+  <div class="kopf">
+    <h2>Zıçan Adam 2026</h2>
+    <p>Eine türkische Comic-Serie im Hochformat, jede Folge nach einer echten Nachricht aus der Türkei. Die Figur ist Kaan Ertems Zıçan aus der LeMan, neu belebt. Drehbuch mit echtem Straßendialog, Bilder, Stimmen und Schnitt entstehen auf dem KI-PC.</p>
+    <p class="werkzeug"><span>ComfyUI</span><span>lokale Videomodelle</span><span>Sprachsynthese</span><span>ffmpeg</span></p>
+  </div>
+  <div class="paar hoch">
+    <figure class="schirm "><video class="clip" controls preload="none" poster="medien/werkstatt/zican_intro.jpg"><source src="medien/werkstatt/zican_intro.mp4" type="video/mp4"></video><figcaption>Intro</figcaption></figure>
+    <figure class="schirm "><video class="clip" controls preload="none" poster="medien/werkstatt/zican_01.jpg"><source src="medien/werkstatt/zican_01.mp4" type="video/mp4"></video><figcaption>Folge 1: Kapora</figcaption></figure>
+    <figure class="schirm "><video class="clip" controls preload="none" poster="medien/werkstatt/zican_02.jpg"><source src="medien/werkstatt/zican_02.mp4" type="video/mp4"></video><figcaption>Folge 2: Peşin ama!</figcaption></figure>
+    <figure class="schirm"><button class="zoom" aria-label="Groß anzeigen"><img src="medien/werkstatt/zican_cover.jpg" alt="Cover von Folge 2" loading="lazy"></button><figcaption>Cover Folge 2</figcaption></figure>
+  </div>
+  <figure class="schirm"><button class="zoom" aria-label="Groß anzeigen"><img src="medien/werkstatt/zican_keyframes.jpg" alt="Schlüsselbilder von Folge 2" loading="lazy"></button><figcaption>Schlüsselbilder von Folge 2</figcaption></figure>
+</section>
+
+<section id="weitere">
+  <div class="kopf">
+    <h2>Und außerdem</h2>
+    <p>Alles andere, was ich gebaut habe oder betreibe.</p>
+  </div>
+  <div class="weitere">
+    <div><h3>App „Infra“</h3><p>Android-App, mit der ich per Stimme mit dem Admin-Agenten spreche: Haus schalten, Stand des Tages, Fragen ans Homelab.</p></div>
+    <div><h3>Projektablage</h3><p>Jedes Projekt liegt an einem Ort. Ein Coding-Agent leiht es aus, baut und gibt es zurück, alles mit Verlauf.</p></div>
+    <div><h3>Sofa Remote</h3><p>Android-Fernbedienung für MacBook und Mac mini: Maus, Tastatur, Medien und Timer vom Sofa aus.</p></div>
+    <div><h3>KI-Gateway</h3><p>Ein Zugang für alle Sprachmodelle, mit fester Rangfolge, automatischem Ausweichen und Limits je Agent.</p></div>
+    <div><h3>Karriere-Assistent</h3><p>Bewertet jeden Morgen neue Stellenmails und pflegt ein Bewerbungs-Dashboard.</p></div>
+    <div><h3>Morgen-Brief</h3><p>Der Scout schickt jeden Morgen den Stand aller Projekte aufs Handy und sonntags neue Ideen.</p></div>
+    <div><h3>Gesundheitsakte</h3><p>Digitale Gesundheitsakte für ein Familienmitglied. Befunde kommen automatisch aus gescannten Dokumenten.</p></div>
+    <div><h3>Scan-Einsortierung</h3><p>Papier in den Scanner, fertig: erkannt, der richtigen Person zugeordnet, im passenden Archiv abgelegt.</p></div>
+    <div><h3>Vector-Roboter</h3><p>Ein Anki Vector mit offener Firmware und eigenem Sprach-Server statt abgeschalteter Hersteller-Cloud. Versteht Deutsch und Türkisch, kennt die Familie, und „Hey Vector, Infra …“ fragt direkt den Admin-Agenten.</p></div>
+    <div><h3>Nöbet Çizelgesi</h3><p>Aufsichtsplan für eine Grundschule in der Türkei: türkische Oberfläche, Ausdruck als PDF und Excel.</p></div>
+    <div><h3>WM-Tippspiel 2026</h3><p>Zweisprachiges Tippspiel für die Familie, durchgespielt bis zum Finale.</p></div>
+    <div><h3>Mayrah IPTV</h3><p>Android-App fürs Fernsehen mit türkischen und deutschen Sendern aus eigenen Kanallisten.</p></div>
+    <div><h3>OpenTier+</h3><p>Android-App, die per Bluetooth direkt mit dem E-Roller spricht, nachdem der Hersteller pleiteging.</p></div>
+    <div><h3>HIZIR</h3><p>Sprachassistent auf dem Mac mini, gesichert und archiviert.</p></div>
+    <div><h3>Eigenes Bildmodell</h3><p>Ein LoRA, auf eigene Fotos trainiert, in vier Versionen, damit Bilder mit mir selbst möglich sind.</p></div>
+    <div><h3>Modell-Benchmark</h3><p>Der Tüftler misst, welche Gratis-Modelle für welche Aufgaben taugen, von leicht bis schwer.</p></div>
+    <div><h3>Telegram-Brücke</h3><p>Steuert den Coding-Agenten per Telegram: Aufgabe schreiben, die Antwort baut sich live in der Nachricht auf.</p></div>
+    <div><h3>Ein Prompt für alle</h3><p>Ein gemeinsamer Master-Prompt für alle Agenten, per Skript ausgerollt: einmal ändern, überall aktuell.</p></div>
+    <div><h3>Mac-Setup</h3><p>Bestandsliste aller Apps samt Paketnamen, damit der Mac nach einer Neuinstallation schnell wieder steht.</p></div>
+    <div><h3>Ein-Klick-Vorlagen</h3><p>Fertige ComfyUI-Abläufe für Bild, Bearbeitung, Hochskalieren und Video, damit nicht jedes Mal ein Schalterwald nötig ist.</p></div>
+    <div><h3>Rüstungs-LoRA</h3><p>Ein eigenes Bildmodell für osmanische Lamellenrüstungen, damit jedes Plättchen und jeder Kettenring stimmt.</p></div>
+    <div><h3>Cibiti Amca</h3><p>Eine eigene Satire-Figur, ein türkischer Onkel mit Meinung zu allem. Noch in der Konzeptphase.</p></div>
+    <div><h3>Drohnen-Missionen</h3><p>Recherche, wie eine DJI Mini 2 vom Handy aus einfache Missionen fliegt: raus, Foto, zurück, landen.</p></div>
+    <div><h3>KI-PC</h3><p>Gaming-PC mit RTX 4070: Windows zum Spielen, Linux für lokale Bild-, Video- und Sprachmodelle.</p></div>
+    <div><h3>Eigene Dienste</h3><p>Fotos, Filme, Notizen, Lesezeichen, Dokumente und Metasuche laufen selbst gehostet statt in fremden Clouds.</p></div>
+    <div><h3>Homelab</h3><p>Zwei Proxmox-Server mit 28 Containern und 4 VMs, getrennte VLANs. Updates und Backups laufen automatisch, gepflegt von einem Admin-Agenten.</p></div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <p class="ende">Alles läuft bei mir zu Hause. Am liebsten zeige ich es live.</p>
+  <p>Code und Daten sind privat, weil hier echte Familiendaten drinstecken. Im Gespräch führe ich gern jede Ecke vor.</p>
+  <nav><a href="https://github.com/PDCem">GitHub</a></nav>
+  <small>Alle Bilder und Clips auf dieser Seite stammen aus meinen eigenen Systemen. Die Sipahi-Figur ist ein Werk von Zeki Algün, alle Rechte bei ihm.</small>
+</footer>
+
+<dialog id="gross"><img alt=""></dialog>
+
+<script>
+const team=[
+ ["infraclaude","InfraClaude","Chef und Admin","Verteilt die Aufträge, prüft die Ergebnisse und hält Netz, Server und Backups am Laufen.","#e67e22"],
+ ["ares","ARES","Desktop-Helfer","Hilft direkt am Mac: Dateien, Apps, Recherche.","#f1c40f"],
+ ["ercanbot","Ercan","Scout","Behält alle Projekte im Blick, schickt morgens den Brief.","#e84393"],
+ ["karrierebot","Clara","Karriere-Coach","Jobsuche, Bewerbungs-Tracker und Interview-Training.","#d4a017"],
+ ["gesundheitsbot","Emma","Ärztin","Führt die Gesundheitsakten der Familie, streng getrennt.","#4cc9b0"],
+ ["finanzbot","Victoria","Finanzen","Kennt Einnahmen, Ausgaben und Krypto.","#2ecc71"],
+ ["claudecode","Max","Baumeister","Coding-Agent für Apps und Webseiten.","#e8a86b"],
+ ["codex","Codex","Code-Ninja","Zweiter Coding-Agent, baut Android-Apps und Webseiten.","#22c55e"],
+ ["opencode","Bolt","Tüftler","Baut eigene Werkzeuge mit Gratis-Modellen.","#f5b700"],
+ ["aibroker","Leon","Trader","Holt Kurse und bewertet Positionen.","#5b9dff"],
+ ["healtdashcem","Mia","Fitness und Uhr","Baut das Health-Dashboard.","#fd79a8"],
+ ["kaan","K.A.A.N.","Hausverwalter","Zeigt und steuert Haus, Netz und Medien.","#38bdf8"],
+ ["kipc_karte","Iris","Designerin","Malt, filmt und baut 3D direkt auf dem KI-PC.","#8b5cf6"]
+];
+const liste=document.getElementById("liste");
+liste.innerHTML=team.map(([id,n,t,r,f])=>`<li style="--farbe:${f}">
+ <button aria-label="${n} lebendig zeigen"><img src="medien/agenten/${id}.webp" alt="Porträt ${n}" loading="lazy" width="520" height="780">
+ <video muted loop playsinline preload="none" data-src="medien/agenten/${id}.mp4"></video></button>
+ <h3>${n}</h3><p class="t">${t}</p><p class="r">${r}</p></li>`).join("");
+const ruhig=matchMedia("(prefers-reduced-motion: reduce)").matches;
+function spiel(li,an){const v=li.querySelector("video");
+ if(an){if(!v.src)v.src=v.dataset.src;v.play().catch(()=>{});li.classList.add("spielt")}
+ else{v.pause();li.classList.remove("spielt")}}
+liste.querySelectorAll("li").forEach(li=>{
+ li.addEventListener("mouseenter",()=>spiel(li,true));
+ li.addEventListener("mouseleave",()=>spiel(li,false));
+ li.querySelector("button").addEventListener("click",()=>spiel(li,!li.classList.contains("spielt")));
+});
+
+// Tageszeiten
+const bilder=[...document.querySelectorAll("#zeitbild img")],knoepfe=[...document.querySelectorAll(".wahl button")];
+knoepfe.forEach(b=>b.addEventListener("click",()=>{
+ knoepfe.forEach(k=>k.setAttribute("aria-pressed",k===b));
+ bilder.forEach(i=>i.classList.toggle("an",i.dataset.z===b.dataset.z));
+}));
+
+// Ereignis-Clips nur abspielen, wenn sichtbar
+const io=new IntersectionObserver(es=>es.forEach(e=>{const v=e.target;
+ if(e.isIntersecting&&!ruhig)v.play().catch(()=>{});else v.pause()}),{threshold:.4});
+document.querySelectorAll("video[data-auto]").forEach(v=>io.observe(v));
+if(ruhig)document.querySelector(".hero video").remove();
+
+// Großansicht
+const dlg=document.getElementById("gross");
+document.querySelectorAll(".zoom").forEach(b=>b.addEventListener("click",()=>{
+ const i=b.querySelector("img");dlg.querySelector("img").src=i.src;dlg.querySelector("img").alt=i.alt;dlg.showModal()}));
+dlg.addEventListener("click",()=>dlg.close());
+</script>
+</body>
+</html>

@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="tr" data-basis="../">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Cem Cumali – Projeler</title>
+<meta name="description" content="Cem Cumali, Kıdemli BT uzmanı: Yapay zekâ ajanlarının gerçek BT işleri yaptığı, kendi sunucularımda çalışan platform AI Workbench.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,300..700,50&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="alternate" hreflang="de" href="https://pdcem.github.io/">
+<link rel="alternate" hreflang="tr" href="https://pdcem.github.io/tr/">
+<link rel="alternate" hreflang="en" href="https://pdcem.github.io/en/">
+<link rel="stylesheet" href="../stil.css?v=3">
+</head>
+<body>
+
+<header class="hero">
+  <nav class="sprache" aria-label="Dil"><a href="../" hreflang="de">DE</a><a href="./" hreflang="tr" aria-current="page">TR</a><a href="../en/" hreflang="en">EN</a></nav>
+  <img class="poster" src="../medien/stadt/nacht.webp" alt="">
+  <video autoplay muted loop playsinline poster="../medien/stadt/nacht.webp" aria-hidden="true">
+    <source src="../medien/stadt/loop_nacht.mp4" type="video/mp4">
+  </video>
+  <div class="hero-text">
+    <h1>Cem Cumali</h1>
+    <p class="rolle">Altyapı, Microsoft 365 ve güvenlik alanında Kıdemli BT uzmanı</p>
+    <p class="satz">Evde <strong>AI Workbench</strong>’i işletiyorum: yapay zekâ ajanlarının gerçek BT işleri yaptığı bir platform. Şehir sadece arayüz. Arkasında kendi sunucularım, kendi ağım ve her birinin sabit görevi olan bir ajan ekibi çalışıyor.</p>
+  </div>
+</header>
+
+<main>
+
+<section id="worum">
+  <div class="kopf">
+    <h2>Mesele ne?</h2>
+    <p>Yapay zekâ ajanları, görevleri kendi başına yapan programlardır: kod yazar, sunucuları kontrol eder, araştırır, belgeleri düzenler. Şu anda şirketlerin BT’sinin bir parçası hâline geliyorlar. Ben böyle bir ekibi bugünden günlük hayatta, kendi donanımımda, gereken her şeyiyle işletiyorum.</p>
+  </div>
+  <ul class="kann worum">
+    <li><strong>Nedir?</strong>13 yapay zekâ ajanı için bir platform: görev almak, dağıtmak, tamamlamak, kontrol etmek. Ne istediğimi söylerim. Bir yönetici ajan işi ekibe dağıtır ve her sonucu bana ulaşmadan önce kontrol eder.</li>
+    <li><strong>Neden yapıyorum?</strong>Ajanlar hakkında okumak yetmez. Onları güvenli ve uygun maliyetle nasıl işleteceğimi bilmek istiyorum: kim neye yetkili, maliyeti ne, hata olunca ne oluyor, kontrol kimde. Bunu ancak gerçek işletimde öğrenirsin.</li>
+    <li><strong>İş hayatında ne işe yarar?</strong>Her şirketteki temellerin aynısı: sanallaştırma, VLAN’lı ağ, yedekleme, erişim ve yetkiler, izleme, otomatik öz testler. Üstüne, yapay zekânın nerede yardımcı olduğu ve nerede basit bir betiğin daha iyi olduğu tecrübesi.</li>
+  </ul>
+  <div class="legende">
+    <p class="legende-titel">Oyun gibi mi görünüyor? Arkasında şunlar var:</p>
+    <dl>
+      <div><dt>Şehirde bir ev</dt><dd>bir Proxmox sunucusunda bir konteyner</dd></div>
+      <div><dt>Bir evin ışığı yanıyor</dt><dd>bu ajan şu anda çalışıyor</dd></div>
+      <div><dt>Bir görev</dt><dd>onaylı ve kontrollü bir talep (ticket)</dd></div>
+      <div><dt>Deniz feneri</dt><dd>InfraClaude’un yönetim konsolu</dd></div>
+      <div><dt>Altın yaylar</dt><dd>gerçek ağ trafiği, canlı ölçülüyor</dd></div>
+      <div><dt>Masa</dt><dd>ajanlarla dosya alışverişi</dd></div>
+    </dl>
+  </div>
+</section>
+
+<section id="zentrale">
+  <div class="kopf">
+    <h2>Merkez</h2>
+    <p>Her şey için tek bir başlangıç sayfası. Arayüz şehirdir: her ajanın bir evi var ve çalışmaya başladığında ışığı yanar. Deniz fenerine tıklayınca, resmin tam ortasında yönetici ajanım <strong>InfraClaude</strong>’a gerçek bir terminal açılır. İsteklerimi alır, görevleri ekibe dağıtır ve her sonucu bana gelmeden önce kontrol eder.</p>
+    <p class="werkzeug"><span>Python</span><span>pgvector’lü PostgreSQL</span><span>MCP</span><span>ttyd</span><span>Canvas</span></p>
+  </div>
+  <figure class="schirm"><video class="clip" muted loop playsinline preload="none" data-auto poster="../medien/zentrale/stadt_infraclaude.jpg" aria-label="Gece Merkez: deniz fenerine tıklayınca InfraClaude’un terminali açılır"><source src="../medien/zentrale/stadt_infraclaude.mp4" type="video/mp4"></video>
+    <figcaption>“hey infra, ne var ne yok?” – pencere kapalı olsa da terminal şehirde çalışmaya devam eder.</figcaption></figure>
+  <div class="paar">
+    <figure class="schirm"><video class="clip" muted loop playsinline preload="none" data-auto poster="../medien/zentrale/stadt_musik.jpg" aria-label="Merkezde radyo ve müzik"><source src="../medien/zentrale/stadt_musik.mp4" type="video/mp4"></video>
+      <figcaption>Radyo ve müzik: istasyon seç ya da şarkı ara, hemen şehirde çalar.</figcaption></figure>
+    <figure class="schirm"><video class="clip" muted loop playsinline preload="none" data-auto poster="../medien/zentrale/stadt_vector_haus.jpg" aria-label="Vector penceresi ve ışık kontrolü"><source src="../medien/zentrale/stadt_vector_haus.mp4" type="video/mp4"></video>
+      <figcaption>Vector ve ev: robotun duyduğu ve söylediği, yanında ışıklar ve televizyon.</figcaption></figure>
+  </div>
+  <div class="unter">
+    <h3>Kontrol ekranı</h3>
+    <p>İkinci monitör dikey duruyor. Tüm sekmeler orada alt alta: internetin ve sunucuların nabzı, projeler, görevler, araştırma ve ağ. Yanındaki <strong>masa</strong>, her ajanla dosya alışverişi yaptığım yer; bunun için hiçbir dil modelinin hesap yapması gerekmez.</p>
+  </div>
+  <div class="paar hochpaar">
+    <figure class="schirm"><video class="clip" muted loop playsinline preload="none" data-auto poster="../medien/zentrale/leitstand.jpg" aria-label="Dikey kontrol ekranı: ajanlar, projeler, araştırma ve ağ"><source src="../medien/zentrale/leitstand.mp4" type="video/mp4"></video>
+      <figcaption>Kontrol ekranı: ajanlar, kullanım, projeler, araştırma, ağ.</figcaption></figure>
+    <figure class="schirm"><video class="clip" muted loop playsinline preload="none" data-auto poster="../medien/zentrale/ablage.jpg" aria-label="Ajanların resimleri, videoları ve programlarıyla masa"><source src="../medien/zentrale/ablage.mp4" type="video/mp4"></video>
+      <figcaption>Masa: ajanlardan 700’ü aşkın resim, video ve program.</figcaption></figure>
+  </div>
+</section>
+
+<section id="portale">
+  <div class="kopf">
+    <h2>İki geçidin ardında</h2>
+    <p>Şehirden iki kapı kendine ait dünyalara açılır. <strong>Sokak</strong>’ta sohbet ajanları yağmurlu bir eski şehirde figür olarak dolaşır, bir görev panosu kimin uyanık kimin uykuda olduğunu gösterir. <strong>Demirhane</strong>’de kodlama ajanları bilgisayarlarının başında oturur, duvar ekranları o an ne yazdıklarını canlı gösterir.</p>
+    <p class="werkzeug"><span>three.js</span><span>animasyonlu 3D figürler</span><span>platformdan canlı veriler</span></p>
+  </div>
+  <figure class="schirm"><video class="clip" muted loop playsinline preload="none" data-auto poster="../medien/zentrale/portale.jpg" aria-label="Sokak ve Demirhane’de tur"><source src="../medien/zentrale/portale.mp4" type="video/mp4"></video>
+    <figcaption>Geçitten Sokak’a, sonra Demirhane’ye ve şehre geri.</figcaption></figure>
+</section>
+
+<section id="bewohner">
+  <div class="kopf">
+    <h2>Sakinler</h2>
+    <p>On üç ajan, her birinin sabit bir rolü var. <strong>InfraClaude</strong> şef: görevleri o dağıtır, diğerleri iş çıkarır. Sohbet ajanlarına Telegram’dan ulaşırım, kodlama ajanları uygulama ve web siteleri yapar, Iris de yapay zekâ bilgisayarında resim ve video üretir.</p>
+  </div>
+  <ul class="bewohner" id="liste"></ul>
+  <p class="hinweis">Portreye dokun ya da fareyle üzerine gel, canlansın.</p>
+</section>
+
+<section id="recherche">
+  <div class="kopf">
+    <h2>Hafıza ve araştırma</h2>
+    <p>Bir ajanın öğrendiği her şey ortak alet çantasına metin olarak düşer: beceriler, bilgiler, hatalar ve raporlar, anlamsal aramayla bulunabilir. Biri daha fazlasına ihtiyaç duyarsa soru sorar; araştırma servisi interneti okur ve kaynaklı, kısa özetli ve önerili bir rapor yazar.</p>
+    <p class="werkzeug"><span>Git ve Markdown</span><span>Obsidian</span><span>GPT Researcher</span><span>SearXNG</span><span>yerel embedding’ler</span></p>
+  </div>
+  <figure class="schirm"><video class="clip" muted loop playsinline preload="none" data-auto poster="../medien/zentrale/wissen.jpg" aria-label="Obsidian’da tüm ajanların bilgi grafiği"><source src="../medien/zentrale/wissen.mp4" type="video/mp4"></video>
+    <figcaption>Tüm ajanların hafızası bir grafik olarak: her nokta bir not, her çizgi bir bağlantı.</figcaption></figure>
+  <div class="paar">
+    <figure class="schirm"><button class="zoom" aria-label="Büyüt"><img src="../medien/shots/z27c-t-recherche.png" alt="Giriş alanı ve hazır raporlarla Araştırma sekmesi" loading="lazy" width="1440" height="1000"></button></figure>
+    <figure class="schirm"><button class="zoom" aria-label="Büyüt"><img src="../medien/shots/z27c-bericht.png" alt="Kısa özet ve önerilerle hazır araştırma raporu" loading="lazy" width="1200" height="1000"></button></figure>
+  </div>
+</section>
+
+<section id="netz">
+  <div class="kopf">
+    <h2>Ağ, canlı</h2>
+    <p>İnternetten son konteynere kadar: Merkez, o an evin içinden ne aktığını kaydeder. Bir ajan çalıştığında evine altın bir yay uzanır.</p>
+    <p class="werkzeug"><span>UniFi API</span><span>Proxmox API</span><span>Canvas</span><span>kendi cihaz görselleri</span></p>
+  </div>
+  <figure class="schirm"><video class="netzlive" muted loop playsinline preload="none" poster="../medien/shots/netz_live.jpg" data-auto aria-label="Canlı ağ görünümü: internetten router ve switch üzerinden iki Proxmox sunucusuna, konteynerlerine ve Wi-Fi’ye veri akışı"><source src="../medien/shots/netz_live.mp4" type="video/mp4"></video>
+    <figcaption>Merkezden canlı: her nokta gerçek trafik, her figür konteynerindeki bir ajan.</figcaption></figure>
+</section>
+
+<section id="minik">
+  <div class="kopf">
+    <h2>Minik: telefonda yaşayan bir hologram <span class="baustelle">Yapım aşamasında</span></h2>
+    <p>En yeni projem, 3 Kasım’da doğdu. Minik, masanın üzerindeki eski bir iPhone’da hologram olarak yaşayan küçük bir karakter. Adını duyunca dinler, insanları yüzünden ve sesinden tanır, birçok dilde serbestçe konuşur ve her gece yeni bir şey öğrenir.</p>
+    <p>Prototip her gün evimizde çalışıyor. <strong>Android sürümü</strong> şimdiden tamamen bir Pixel üzerinde, her şey telefonda çalışıyor. Bundan herkes için bir uygulama çıkacak: kur, kendi Gemini anahtarını gir, hazır. Ardından Minik arka plansız bir karakter olarak bilgisayara gelecek.</p>
+    <p class="werkzeug"><span>Gemini Live</span><span>Pipecat</span><span>sherpa-onnx</span><span>InsightFace</span><span>Qwen-Image-Edit</span><span>MiniMax H3</span><span>BiRefNet</span></p>
+    <p class="mehr"><a href="https://github.com/PDCem/minik">Minik GitHub’da</a></p>
+  </div>
+  <ul class="kann drei">
+    <li><strong>Duymak ve konuşmak</strong>“Minik” uyandırma kelimesini yerelde tanır, sonra Gemini Live üzerinden beklemeden serbestçe konuşur. Ağzı sesiyle birlikte canlı hareket eder.</li>
+    <li><strong>Görmek ve tanımak</strong>Yüzleri 0,15 saniyede, odada birden fazla kişi olsa bile sesleri, el sallamak ya da başparmak gibi hareketleri, kediyi de tanır.</li>
+    <li><strong>Bir hafıza</strong>Her kişi için bir dosya, kafasında sadece kısa bir yol gösterici. Eksik bir şey varsa sorar. Geceleri günün konuşmalarını okur ve onlardan öğrenir.</li>
+    <li><strong>Günlük hayat</strong>Almanya ve Türkiye’den haberler, Alman Meteoroloji Servisi’nden hava durumu, randevular, notlar, zamanlayıcılar ve kamerayla nabız.</li>
+    <li><strong>Gizlilik</strong>Çevreden hiçbir şey kaydetmez. Sadece adıyla başlayan sözler Gemini’ye gider. Uygulama kapalıysa Minik de kapalı.</li>
+    <li><strong>Karakter</strong>Her klip kendi ekran kartımda yerelde üretilir: kostüm, sabit ilk ve son kareli video, arka planı ayrılmış, kendi betiğimle hologram görünümü. Böylece her klip bir sonrakine kusursuz bağlanır.</li>
+  </ul>
+  <h3 class="reihe">Sahneler <span>Boşta rastgele değişir, istenince oynar.</span></h3>
+  <div class="holos">
+    <figure class="holo"><video muted loop playsinline preload="none" data-auto poster="../medien/minik/minik_idle_dj.jpg" aria-label="Minik: DJ masasında"><source src="../medien/minik/minik_idle_dj.mp4" type="video/mp4"></video><figcaption>DJ masasında</figcaption></figure>
+    <figure class="holo"><video muted loop playsinline preload="none" data-auto poster="../medien/minik/minik_idle_astronaut.jpg" aria-label="Minik: Yerçekimsiz"><source src="../medien/minik/minik_idle_astronaut.mp4" type="video/mp4"></video><figcaption>Yerçekimsiz</figcaption></figure>
+    <figure class="holo"><video muted loop playsinline preload="none" data-auto poster="../medien/minik/minik_idle_held.jpg" aria-label="Minik: Küçük kahraman"><source src="../medien/minik/minik_idle_held.mp4" type="video/mp4"></video><figcaption>Küçük kahraman</figcaption></figure>
+    <figure class="holo"><video muted loop playsinline preload="none" data-auto poster="../medien/minik/minik_idle_zauberer.jpg" aria-label="Minik: Sihirbaz"><source src="../medien/minik/minik_idle_zauberer.mp4" type="video/mp4"></video><figcaption>Sihirbaz</figcaption></figure>
+    <figure class="holo"><video muted loop playsinline preload="none" data-auto poster="../medien/minik/minik_idle_rockstar.jpg" aria-label="Minik: Rock yıldızı"><source src="../medien/minik/minik_idle_rockstar.mp4" type="video/mp4"></video><figcaption>Rock yıldızı</figcaption></figure>
+    <figure class="holo"><video muted loop playsinline preload="none" data-auto poster="../medien/minik/minik_idle_licht.jpg" aria-label="Minik: Avucunda bir ışık"><source src="../medien/minik/minik_idle_licht.mp4" type="video/mp4"></video><figcaption>Avucunda bir ışık</figcaption></figure>
+    <figure class="holo"><video muted loop playsinline preload="none" data-auto poster="../medien/minik/minik_idle_zwinkern.jpg" aria-label="Minik: Göz kırpma"><source src="../medien/minik/minik_idle_zwinkern.mp4" type="video/mp4"></video><figcaption>Göz kırpma</figcaption></figure>
+    <figure class="holo"><video muted loop playsinline preload="none" data-auto poster="../medien/minik/minik_lachen.jpg" aria-label="Minik: Gülme"><source src="../medien/minik/minik_lachen.mp4" type="video/mp4"></video><figcaption>Gülme</figcaption></figure>
+  </div>
+  <h3 class="reihe">Danslar <span>İstenince, her biri gerçek bir şarkıyla.</span></h3>
+  <div class="holos">
+    <figure class="holo"><video muted loop playsinline preload="none" data-auto poster="../medien/minik/minik_tanz_hiphop1.jpg" aria-label="Minik: Hip-hop"><source src="../medien/minik/minik_tanz_hiphop1.mp4" type="video/mp4"></video><figcaption>Hip-hop</figcaption></figure>
+    <figure class="holo"><video muted loop playsinline preload="none" data-auto poster="../medien/minik/minik_tanz_hiphop2.jpg" aria-label="Minik: Hip-hop, ikinci tur"><source src="../medien/minik/minik_tanz_hiphop2.mp4" type="video/mp4"></video><figcaption>Hip-hop, ikinci tur</figcaption></figure>
+    <figure class="holo"><video muted loop playsinline preload="none" data-auto poster="../medien/minik/minik_tanz_tiktok.jpg" aria-label="Minik: TikTok"><source src="../medien/minik/minik_tanz_tiktok.mp4" type="video/mp4"></video><figcaption>TikTok</figcaption></figure>
+    <figure class="holo"><video muted loop playsinline preload="none" data-auto poster="../medien/minik/minik_tanz_horon.jpg" aria-label="Minik: Horon"><source src="../medien/minik/minik_tanz_horon.mp4" type="video/mp4"></video><figcaption>Horon</figcaption></figure>
+    <figure class="holo"><video muted loop playsinline preload="none" data-auto poster="../medien/minik/minik_tanz_bauchtanz.jpg" aria-label="Minik: Oryantal"><source src="../medien/minik/minik_tanz_bauchtanz.mp4" type="video/mp4"></video><figcaption>Oryantal</figcaption></figure>
+    <figure class="holo"><video muted loop playsinline preload="none" data-auto poster="../medien/minik/minik_tanz_breakdance.jpg" aria-label="Minik: Breakdance"><source src="../medien/minik/minik_tanz_breakdance.mp4" type="video/mp4"></video><figcaption>Breakdance</figcaption></figure>
+    <figure class="holo"><video muted loop playsinline preload="none" data-auto poster="../medien/minik/minik_tanz_roboter.jpg" aria-label="Minik: Robot dansı"><source src="../medien/minik/minik_tanz_roboter.mp4" type="video/mp4"></video><figcaption>Robot dansı</figcaption></figure>
+  </div>
+  <h3 class="reihe">Gece ve gündüz</h3>
+  <div class="holos">
+    <figure class="holo"><video muted loop playsinline preload="none" data-auto poster="../medien/minik/minik_winken.jpg" aria-label="Minik: El sallar"><source src="../medien/minik/minik_winken.mp4" type="video/mp4"></video><figcaption>El sallar</figcaption></figure>
+    <figure class="holo"><video muted loop playsinline preload="none" data-auto poster="../medien/minik/minik_zuhoeren.jpg" aria-label="Minik: Dinliyor"><source src="../medien/minik/minik_zuhoeren.mp4" type="video/mp4"></video><figcaption>Dinliyor</figcaption></figure>
+    <figure class="holo"><video muted loop playsinline preload="none" data-auto poster="../medien/minik/minik_einschlafen.jpg" aria-label="Minik: Uykulu"><source src="../medien/minik/minik_einschlafen.mp4" type="video/mp4"></video><figcaption>Uykulu</figcaption></figure>
+    <figure class="holo"><video muted loop playsinline preload="none" data-auto poster="../medien/minik/minik_schlafen.jpg" aria-label="Minik: Yatağında uyuyor"><source src="../medien/minik/minik_schlafen.mp4" type="video/mp4"></video><figcaption>Yatağında uyuyor</figcaption></figure>
+  </div>
+</section>
+
+<section id="kaan">
+  <div class="kopf">
+    <h2>K.A.A.N., ev yöneticisi</h2>
+    <p>Oturma odası için bir Jarvis, iPad’de de. Onunla konuşursun, konuşmayı yerelde tanır ve sesli cevap verir. Bu arada bütün evi de gözetir.</p>
+    <p class="werkzeug"><span>Whisper</span><span>metinden sese</span><span>UniFi API</span><span>Proxmox API</span><span>nginx</span></p>
+  </div>
+  <ul class="kann">
+    <li><strong>İnternet</strong>Hat, ping, hız ve aylık veri kullanımı</li>
+    <li><strong>İkinci router</strong>Cihazlar, VPN konumu, yük ve sıcaklık</li>
+    <li><strong>Sunucular</strong>İki Proxmox sunucusunun tüm misafirleriyle CPU, RAM ve diski</li>
+    <li><strong>Ajanlar</strong>Her ajan ve her tezgâh, durum ve yüküyle</li>
+    <li><strong>Akıllı ev</strong>Işıkları kıs, televizyonu aç kapa, YouTube’u televizyona gönder</li>
+    <li><strong>Radyo</strong>35 Türk ve Alman istasyonu, hemen dinlenebilir</li>
+    <li><strong>Hava ve gökyüzü</strong>Beş günlük tahmin, gün doğumu ve batımı, ay evresi</li>
+    <li><strong>Hatırlatmalar</strong>Randevular ve aile günleri, sabah özeti gibi ajan notları</li>
+    <li><strong>Haber bandı</strong>Almanca ve Türkçe haberler, lira kuru ve altın fiyatı</li>
+    <li><strong>Vector</strong>Küçük robot da bağlı, buradan açılabilir</li>
+  </ul>
+  <figure class="schirm"><button class="zoom" aria-label="Büyüt"><img src="../medien/shots/kaan.png" alt="Ağ, Proxmox yükü, hava durumu, akıllı ev ve radyo ile K.A.A.N. arayüzü" loading="lazy" width="1440" height="900"></button></figure>
+</section>
+
+<section id="health">
+  <div class="kopf">
+    <h2>Sağlık Monitörü</h2>
+    <p>Akıllı saat ve telefon verilerini kendi sunucuma gönderir. Buradan uyku, adım ve nabızla kişisel bir sağlık panosu çıkar.</p>
+    <p class="werkzeug"><span>Android</span><span>Wear OS</span><span>web panosu</span></p>
+  </div>
+  <figure class="schirm"><button class="zoom" aria-label="Büyüt"><img src="../medien/shots/health.png" alt="Vücut modeli, uyku evreleri ve son 30 günün adımlarıyla Sağlık Monitörü" loading="lazy" width="1440" height="900"></button></figure>
+</section>
+
+<section id="aibroker">
+  <div class="kopf">
+    <h2>AI Broker</h2>
+    <p>Kripto, hisse, ETF ve Türk varlıkları için bir araştırma panosu. Her gece rollerden oluşan bir ekip her varlığı değerlendirir ve kararını gerekçelendirir: piyasa durumu, fırsatlar, uyarılar ve kendi isabet oranı. Herkese açık bir bölüm, gerçek fiyatlar ve kendi girişiyle bir deneme portföyü olarak çalışır. Kesinlikle yatırım tavsiyesi değildir.</p>
+    <p class="werkzeug"><span>Python</span><span>Codex</span><span>headless tarayıcı</span><span>Cron</span><span>Supabase</span></p>
+  </div>
+  <figure class="schirm"><button class="zoom" aria-label="Büyüt"><img src="../medien/shots/aibroker-dunkel.png" alt="Korku ve açgözlülük endeksi, altcoin sezonu, piyasa genişliği ve öncü endekslerle AI Broker genel görünümü" loading="lazy" width="1440" height="900"></button></figure>
+</section>
+
+<section id="web">
+  <div class="kopf">
+    <h2>İnternet için yapıldı</h2>
+    <p>Herkese açık çalışan iki site. <strong>Öğrenme platformu</strong> ailede sınav hazırlığı için doğdu: üç ders, 300’ü aşkın soru, kopya kâğıtları ve deneme sınavı, hesap gerekmeden. Yanında kariyerimi ve projelerimi gösteren <strong>başvuru profilim</strong>.</p>
+    <p class="werkzeug"><span>Astro</span><span>Vercel</span></p>
+  </div>
+  <div class="paar">
+    <figure class="schirm"><button class="zoom" aria-label="Büyüt"><img src="../medien/shots/lernplattform-2.png" alt="İlerleme, bölümler ve testlerle Matematik 1 öğrenme platformu" loading="lazy" width="1440" height="900"></button>
+      <figcaption>Öğrenme platformu, burada Matematik 1</figcaption></figure>
+    <figure class="schirm"><button class="zoom" aria-label="Büyüt"><img src="../medien/shots/profil.png" alt="Fotoğraf ve temel bilgilerle Cem Cumali’nin başvuru profili" loading="lazy" width="1440" height="900"></button>
+      <figcaption><a href="https://profilcem.vercel.app">Başvuru profili</a></figcaption></figure>
+  </div>
+</section>
+
+<section id="werkstatt">
+  <div class="kopf">
+    <h2><span style="white-space:nowrap">Yapay zekâ</span> atölyemden</h2>
+    <p>Şehir, portreler ve cihaz görselleri, yerel resim ve video modelleriyle kendi yapay zekâ bilgisayarımda üretiliyor. Günün her saati için ayrı bir resim var, yanında Merkez’de oynatılan kısa olaylar.</p>
+    <p class="werkzeug"><span>ComfyUI</span><span>Qwen Image</span><span>yerel video modelleri</span><span>kendi GPU’m</span></p>
+  </div>
+  <div class="zeiten">
+    <div class="bild" id="zeitbild">
+      <img src="../medien/stadt/morgen.webp" alt="Sabah şehir" data-z="morgen" loading="lazy">
+      <img src="../medien/stadt/tag.webp" alt="Gündüz şehir" data-z="tag" loading="lazy">
+      <img src="../medien/stadt/abend.webp" alt="Akşam şehir" data-z="abend" loading="lazy" class="an">
+      <img src="../medien/stadt/nacht.webp" alt="Gece şehir" data-z="nacht" loading="lazy">
+    </div>
+    <div class="wahl" role="group" aria-label="Günün saati">
+      <button data-z="morgen" aria-pressed="false">Sabah</button>
+      <button data-z="tag" aria-pressed="false">Gündüz</button>
+      <button data-z="abend" aria-pressed="true">Akşam</button>
+      <button data-z="nacht" aria-pressed="false">Gece</button>
+    </div>
+  </div>
+  <div class="ereignisse">
+    <figure><video muted loop playsinline preload="none" poster="../medien/stadt/nacht.webp" data-auto><source src="../medien/stadt/ereignis_schiff_nacht.mp4" type="video/mp4"></video><figcaption>Bir gemi limana giriyor</figcaption></figure>
+    <figure><video muted loop playsinline preload="none" poster="../medien/stadt/nacht.webp" data-auto><source src="../medien/stadt/ereignis_feuerwerk_nacht.mp4" type="video/mp4"></video><figcaption>Havai fişek</figcaption></figure>
+    <figure><video muted loop playsinline preload="none" poster="../medien/stadt/abend.webp" data-auto><source src="../medien/stadt/ereignis_gewitter_abend.mp4" type="video/mp4"></video><figcaption>Fırtına</figcaption></figure>
+  </div>
+</section>
+
+<section id="llm">
+  <div class="kopf">
+    <h2>Kendi evimde dil modelleri</h2>
+    <p>Ajanlar bulut modelleriyle çalışıyor. Bir sağlayıcı çökerse ya da bir limit devreye girerse, yapay zekâ bilgisayarında <strong>yedek olarak kendi modellerim</strong> hazır bekliyor. Ajanların zaten tanıdığı bir arayüz üzerinden çalışıyorlar. Bir sohbet ajanı deneme olarak araç çağrıları dahil tamamen yerelde çalıştı.</p>
+    <p class="werkzeug"><span>llama.cpp, CUDA için kendim derledim</span><span>GGUF kuantizasyon</span><span>OpenAI uyumlu API</span><span>RTX 4070, 12 GB</span></p>
+  </div>
+  <ul class="kann">
+    <li><strong>Qwen 3.6 · 35B (MoE)</strong>Yedek sunucu olarak çalışıyor: saniyede 2.000’i aşkın token okuyor, yaklaşık 55 token yazıyor, araç çağrıları doğrulandı.</li>
+    <li><strong>Qwen 3.8 · 27B</strong>9 ile 17 GB arası üç boyutta, çoklu token tahminiyle ve tahminsiz ölçüldü.</li>
+    <li><strong>Bonsai 2 · 27B</strong>64.000 token bağlamlı ikinci yedek sunucu, uzun ajan istemlerini hızlı okumak için ayarlandı.</li>
+    <li><strong>Xing 4.0 · 29B</strong>Yeni kodlama modeli, çıkışından birkaç gün sonra kendi llama.cpp dalımla çalışır hâle getirildi.</li>
+    <li><strong>Qwen 3.8 Flash-Next</strong>60 GB’ı aşan 2-bit bir dev: çalışıyor ama işlemcinin nerede darboğaz olduğunu gösteriyor.</li>
+    <li><strong>Akılda kalan</strong>Çoklu token tahmini ancak model karta tamamen sığmıyorsa işe yarıyor: büyükte yüzde 27 artı, küçükte yüzde 40 eksi.</li>
+  </ul>
+</section>
+
+<section id="weitere">
+  <div class="kopf">
+    <h2>Ve dahası</h2>
+    <p>Yaptığım ya da işlettiğim diğer her şey.</p>
+  </div>
+  <div class="weitere">
+    <div><h3>“Infra” uygulaması</h3><p>Yönetici ajanla sesle konuştuğum Android uygulaması: evi kontrol etmek, günün durumu, homelab’e sorular.</p></div>
+    <div><h3>Beşik ve hastane</h3><p>Yeni ajanlar ortak bir şablondan tek bir başlatma komutuyla doğar. Biri hastalanırsa otomatik olarak hastaneye yatırılır ve tedavi edilir.</p></div>
+    <div><h3>Kayıp eşya bürosu</h3><p>Her gün metin, resim, video ve ses için yeni yapay zekâ modellerini toplar. Ajanlar model seçmeden önce önce buraya bakar.</p></div>
+    <div><h3>Öz denetim ve hata defteri</h3><p>Tüm platformda 40’ı aşkın otomatik kontrol. Giderilen her hata hata defterine girer ve bir daha geri gelmesin diye kendi geri dönüş testini alır.</p></div>
+    <div><h3>Kendi web aramam</h3><p>Yabancı arama servisleri yerine tüm ajanlar için arama ve okuma servisi olarak çalışan headless bir tarayıcı.</p></div>
+    <div><h3>Minga AI</h3><p>Gerçek müşterileri olan şirket sitesi <a href="https://minga-ai.de">minga-ai.de</a>, Astro ve Tailwind ile yapıldı.</p></div>
+    <div><h3>Çizgi Bilgisayar</h3><p>Kuşadası’nda bir arkadaşımın bilgisayar ve Apple servisi için Türkçe web sitesi; sistem planlayıcısı ve kendi laptop filmiyle.</p></div>
+    <div><h3>Integra Çalışma Alanı</h3><p>Antalya’da bir elektrik mühendisliği firması için çalışma platformu: çalışanlar ve iki yapay zekâ ajanı birlikte, tamamen Türkçe çalışıyor.</p></div>
+    <div><h3>Bir cam atölyesi için teknik çizimler</h3><p>El eskizlerinden delik planı ve CNC dosyası (DXF ve DWG) ile imalat çizimleri, sabit bir kontrol şemasına göre.</p></div>
+    <div><h3>Proje deposu</h3><p>Her proje tek bir yerde durur. Bir kodlama ajanı onu ödünç alır, geliştirir ve geri verir, hepsi geçmişiyle.</p></div>
+    <div><h3>Sofa Remote</h3><p>MacBook ve Mac mini için Android kumanda: fare, klavye, medya ve zamanlayıcı, kanepeden.</p></div>
+    <div><h3>Yapay zekâ geçidi</h3><p>Tüm dil modelleri için tek bir erişim noktası: sabit sıralama, otomatik geçiş ve ajan başına limitler.</p></div>
+    <div><h3>Kariyer asistanı</h3><p>Her sabah yeni iş ilanı e-postalarını değerlendirir ve bir başvuru panosu tutar.</p></div>
+    <div><h3>Sabah özeti</h3><p>Gözcü her sabah tüm projelerin durumunu telefonuma, pazar günleri de yeni fikirleri gönderir.</p></div>
+    <div><h3>Sağlık dosyası</h3><p>Bir aile üyesi için dijital sağlık dosyası. Bulgular taranan belgelerden otomatik gelir.</p></div>
+    <div><h3>Tarama düzenleme</h3><p>Kâğıdı tarayıcıya koy, bitti: tanınır, doğru kişiye atanır, uygun arşive kaldırılır.</p></div>
+    <div><h3>Vector robotu</h3><p>Kapanan üretici bulutu yerine açık yazılımlı ve kendi ses sunuculu bir Anki Vector. Almanca ve Türkçe anlar, aileyi tanır, “Hey Vector, Infra …” doğrudan yönetici ajana sorar.</p></div>
+    <div><h3>Nöbet Çizelgesi</h3><p>Türkiye’de bir ilkokul için nöbet planı: Türkçe arayüz, PDF ve Excel çıktısı.</p></div>
+    <div><h3>Dünya Kupası 2026 tahmin oyunu</h3><p>Aile için iki dilli tahmin oyunu, finale kadar oynandı.</p></div>
+    <div><h3>Mayrah IPTV</h3><p>Kendi kanal listelerinden Türk ve Alman kanallarıyla televizyon için Android uygulaması.</p></div>
+    <div><h3>OpenTier+</h3><p>Üretici iflas ettikten sonra elektrikli scooter ile Bluetooth üzerinden doğrudan konuşan Android uygulaması.</p></div>
+    <div><h3>HIZIR</h3><p>Mac mini’de sesli asistan, yedeklendi ve arşivlendi.</p></div>
+    <div><h3>Kendi resim modelim</h3><p>Kendi fotoğraflarımla eğitilmiş, dört sürümlü bir LoRA; böylece beni gösteren resimler mümkün.</p></div>
+    <div><h3>Model karşılaştırması</h3><p>Mucit, hangi ücretsiz modelin hangi işe yaradığını kolaydan zora ölçer.</p></div>
+    <div><h3>Telegram köprüsü</h3><p>Kodlama ajanını Telegram’dan yönetir: görevi yaz, cevap mesajın içinde canlı oluşur.</p></div>
+    <div><h3>Herkes için tek istem</h3><p>Tüm ajanlar için betikle dağıtılan ortak bir ana istem: bir kez değiştir, her yerde güncel.</p></div>
+    <div><h3>Mac kurulumu</h3><p>Paket adlarıyla tüm uygulamaların envanteri; Mac yeniden kurulumdan sonra hızla ayağa kalksın diye.</p></div>
+    <div><h3>Tek tık şablonlar</h3><p>Resim, düzenleme, büyütme ve video için hazır ComfyUI akışları; her seferinde bir anahtar ormanına gerek kalmasın diye.</p></div>
+    <div><h3>Zırh LoRA’sı</h3><p>Osmanlı lamel zırhları için özel bir resim modeli; her pul ve her zincir halkası doğru olsun diye.</p></div>
+    <div><h3>Cibiti Amca</h3><p>Kendi hiciv karakterim, her konuda fikri olan bir Türk amca. Henüz konsept aşamasında.</p></div>
+    <div><h3>Drone görevleri</h3><p>Bir DJI Mini 2’nin telefondan basit görevleri nasıl uçabileceğine dair araştırma: çık, fotoğraf çek, dön, in.</p></div>
+    <div><h3>Yapay zekâ bilgisayarı</h3><p>RTX 4070’li oyun bilgisayarı: oyun için Windows, yerel resim, video ve dil modelleri için Linux.</p></div>
+    <div><h3>Kendi servislerim</h3><p>Fotoğraflar, filmler, notlar, yer imleri, belgeler ve meta arama yabancı bulutlar yerine kendi sunucularımda çalışıyor.</p></div>
+    <div><h3>Homelab</h3><p>30’u aşkın konteyner ve 4 sanal makineli iki Proxmox sunucusu, ayrı VLAN’lar. Güncellemeler ve yedeklemeler otomatik çalışır, bir yönetici ajan bakar.</p></div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <p class="ende">Her şey evimde çalışıyor. En çok canlı göstermeyi severim.</p>
+  <p>Kod ve veriler gizli, çünkü içinde gerçek aile verileri var. Görüşmede her köşesini memnuniyetle gösteririm.</p>
+  <nav><a href="mailto:cemcumali@gmail.com">cemcumali@gmail.com</a><a href="https://www.linkedin.com/in/cem-cumali-789a01101/">LinkedIn</a><a href="https://github.com/PDCem">GitHub</a></nav>
+  <small>Bu sayfadaki tüm resim ve klipler kendi sistemlerimden geliyor.</small>
+</footer>
+
+<dialog id="gross"><img alt=""></dialog>
+
+<script src="../seite.js?v=3"></script>
+</body>
+</html>

@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="en" data-basis="../">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Cem Cumali – Projects</title>
+<meta name="description" content="Cem Cumali, Senior IT: the AI Workbench, a self-hosted platform where AI agents do real IT work.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,300..700,50&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="alternate" hreflang="de" href="https://pdcem.github.io/">
+<link rel="alternate" hreflang="tr" href="https://pdcem.github.io/tr/">
+<link rel="alternate" hreflang="en" href="https://pdcem.github.io/en/">
+<link rel="stylesheet" href="../stil.css?v=3">
+</head>
+<body>
+
+<header class="hero">
+  <nav class="sprache" aria-label="Language"><a href="../" hreflang="de">DE</a><a href="../tr/" hreflang="tr">TR</a><a href="./" hreflang="en" aria-current="page">EN</a></nav>
+  <img class="poster" src="../medien/stadt/nacht.webp" alt="">
+  <video autoplay muted loop playsinline poster="../medien/stadt/nacht.webp" aria-hidden="true">
+    <source src="../medien/stadt/loop_nacht.mp4" type="video/mp4">
+  </video>
+  <div class="hero-text">
+    <h1>Cem Cumali</h1>
+    <p class="rolle">Senior IT for infrastructure, Microsoft 365 and security</p>
+    <p class="satz">At home I run the <strong>AI Workbench</strong>: a platform where AI&#8209;agents do real IT work. The city is just the interface. Behind it run my own servers, my own network and a team of agents with fixed roles.</p>
+  </div>
+</header>
+
+<main>
+
+<section id="worum">
+  <div class="kopf">
+    <h2>What this is about</h2>
+    <p>AI agents are programs that complete tasks on their own: writing code, checking servers, researching, sorting documents. They are becoming part of corporate IT right now. I already run such a team in everyday life, on my own hardware, with everything that comes with it.</p>
+  </div>
+  <ul class="kann worum">
+    <li><strong>What it is</strong>A platform for 13 AI agents: take jobs, assign them, get them done, check them. I say what I need. An admin agent hands the work to the team and checks every result before it reaches me.</li>
+    <li><strong>Why I build it</strong>Reading about agents is not enough. I want to know how to run them safely and affordably: who may do what, what it costs, what happens when things fail, who keeps control. You only learn that in real operation.</li>
+    <li><strong>What counts on the job</strong>The same foundations as in any company: virtualization, a network with VLANs, backups, access and permissions, monitoring, automatic self-tests. Plus the experience of where AI helps and where a simple script is better.</li>
+  </ul>
+  <div class="legende">
+    <p class="legende-titel">Looks like a game? Here is what is behind it:</p>
+    <dl>
+      <div><dt>A house in the city</dt><dd>a container on a Proxmox server</dd></div>
+      <div><dt>A house lights up</dt><dd>this agent is working right now</dd></div>
+      <div><dt>A job</dt><dd>a ticket with approval and review</dd></div>
+      <div><dt>The lighthouse</dt><dd>the admin console to InfraClaude</dd></div>
+      <div><dt>Golden arcs</dt><dd>real network traffic, measured live</dd></div>
+      <div><dt>The file desk</dt><dd>file exchange with the agents</dd></div>
+    </dl>
+  </div>
+</section>
+
+<section id="zentrale">
+  <div class="kopf">
+    <h2>The Control Center</h2>
+    <p>One start page for everything. The city is the interface: every agent has a house that lights up as soon as it works. A click on the lighthouse opens a real terminal to <strong>InfraClaude</strong>, my admin agent, right inside the picture. He takes my requests, hands jobs to the team and checks every result before it lands with me.</p>
+    <p class="werkzeug"><span>Python</span><span>PostgreSQL with pgvector</span><span>MCP</span><span>ttyd</span><span>Canvas</span></p>
+  </div>
+  <figure class="schirm"><video class="clip" muted loop playsinline preload="none" data-auto poster="../medien/zentrale/stadt_infraclaude.jpg" aria-label="The Control Center at night: a click on the lighthouse opens InfraClaude's terminal"><source src="../medien/zentrale/stadt_infraclaude.mp4" type="video/mp4"></video>
+    <figcaption>“hey infra, what's up?” – the terminal keeps running in the city even when the window is closed.</figcaption></figure>
+  <div class="paar">
+    <figure class="schirm"><video class="clip" muted loop playsinline preload="none" data-auto poster="../medien/zentrale/stadt_musik.jpg" aria-label="Radio and music right in the Control Center"><source src="../medien/zentrale/stadt_musik.mp4" type="video/mp4"></video>
+      <figcaption>Radio and music: pick a station or search for a song, it plays right away in the city.</figcaption></figure>
+    <figure class="schirm"><video class="clip" muted loop playsinline preload="none" data-auto poster="../medien/zentrale/stadt_vector_haus.jpg" aria-label="Vector window and light control"><source src="../medien/zentrale/stadt_vector_haus.mp4" type="video/mp4"></video>
+      <figcaption>Vector and the house: what the robot hears and says, plus lights and TV.</figcaption></figure>
+  </div>
+  <div class="unter">
+    <h3>The control desk</h3>
+    <p>The second monitor stands upright. All tabs run there one below the other: the pulse of internet and servers, projects, jobs, research and the network. The <strong>file desk</strong> next to it is the table where I swap files with every agent, without a language model having to compute anything.</p>
+  </div>
+  <div class="paar hochpaar">
+    <figure class="schirm"><video class="clip" muted loop playsinline preload="none" data-auto poster="../medien/zentrale/leitstand.jpg" aria-label="Portrait-mode control desk: agents, projects, research and network"><source src="../medien/zentrale/leitstand.mp4" type="video/mp4"></video>
+      <figcaption>Control desk: agents, usage, projects, research, network.</figcaption></figure>
+    <figure class="schirm"><video class="clip" muted loop playsinline preload="none" data-auto poster="../medien/zentrale/ablage.jpg" aria-label="File desk with the agents' images, videos and programs"><source src="../medien/zentrale/ablage.mp4" type="video/mp4"></video>
+      <figcaption>File desk: more than 700 images, videos and programs from the agents.</figcaption></figure>
+  </div>
+</section>
+
+<section id="portale">
+  <div class="kopf">
+    <h2>Behind two portals</h2>
+    <p>Two gates lead from the city into worlds of their own. In the <strong>Alley</strong> the chat agents walk as figures through a rainy old town, and a mission board shows who is awake and who is asleep. In the <strong>Forge</strong> the coding agents sit at their computers, and the wall screens show live what they are writing.</p>
+    <p class="werkzeug"><span>three.js</span><span>animated 3D figures</span><span>live data from the platform</span></p>
+  </div>
+  <figure class="schirm"><video class="clip" muted loop playsinline preload="none" data-auto poster="../medien/zentrale/portale.jpg" aria-label="Tour through the Alley and the Forge"><source src="../medien/zentrale/portale.mp4" type="video/mp4"></video>
+    <figcaption>Through the portal into the Alley, then into the Forge and back to the city.</figcaption></figure>
+</section>
+
+<section id="bewohner">
+  <div class="kopf">
+    <h2>The residents</h2>
+    <p>Thirteen agents, each with a fixed role. <strong>InfraClaude</strong> is the chief: he hands out the jobs, the others deliver. I reach the chat agents via Telegram, the coding agents build apps and websites, and Iris paints and films on the AI PC.</p>
+  </div>
+  <ul class="bewohner" id="liste"></ul>
+  <p class="hinweis">Tap a portrait or hover over it to bring it to life.</p>
+</section>
+
+<section id="recherche">
+  <div class="kopf">
+    <h2>Memory and research</h2>
+    <p>Whatever an agent learns ends up as text in the shared toolbox: skills, facts, mistakes and reports, searchable via semantic search. If one needs more, it asks a question, and the research service reads the web and writes a report with sources, a short summary and recommendations.</p>
+    <p class="werkzeug"><span>Git and Markdown</span><span>Obsidian</span><span>GPT Researcher</span><span>SearXNG</span><span>local embeddings</span></p>
+  </div>
+  <figure class="schirm"><video class="clip" muted loop playsinline preload="none" data-auto poster="../medien/zentrale/wissen.jpg" aria-label="Knowledge graph of all agents in Obsidian"><source src="../medien/zentrale/wissen.mp4" type="video/mp4"></video>
+    <figcaption>The memory of all agents as a graph: every dot a note, every line a link.</figcaption></figure>
+  <div class="paar">
+    <figure class="schirm"><button class="zoom" aria-label="Show large"><img src="../medien/shots/z27c-t-recherche.png" alt="Research tab with input field and finished reports" loading="lazy" width="1440" height="1000"></button></figure>
+    <figure class="schirm"><button class="zoom" aria-label="Show large"><img src="../medien/shots/z27c-bericht.png" alt="Finished research report with summary and recommendations" loading="lazy" width="1200" height="1000"></button></figure>
+  </div>
+</section>
+
+<section id="netz">
+  <div class="kopf">
+    <h2>The network, live</h2>
+    <p>From the internet down to the last container: the Control Center records what is flowing through the house right now. When an agent works, a golden arc runs to its house.</p>
+    <p class="werkzeug"><span>UniFi API</span><span>Proxmox API</span><span>Canvas</span><span>custom device images</span></p>
+  </div>
+  <figure class="schirm"><video class="netzlive" muted loop playsinline preload="none" poster="../medien/shots/netz_live.jpg" data-auto aria-label="Live network view: data flows from the internet through router and switch to two Proxmox servers, their containers and the Wi-Fi"><source src="../medien/shots/netz_live.mp4" type="video/mp4"></video>
+    <figcaption>Live from the Control Center: every dot is real traffic, every figure an agent in its container.</figcaption></figure>
+</section>
+
+<section id="minik">
+  <div class="kopf">
+    <h2>Minik: a hologram that lives in a phone <span class="baustelle">In progress</span></h2>
+    <p>My newest project, born on 3 November. Minik is a small character who lives as a hologram on an old iPhone on the desk. He listens to his name, recognizes people by face and voice, talks freely in many languages and learns something new every night.</p>
+    <p>The prototype runs at our home every day. The <strong>Android version</strong> already runs entirely on a Pixel, everything on the phone. It is turning into an app for everyone: install it, enter your own Gemini key, done. After that, Minik comes to the PC as a character without a background.</p>
+    <p class="werkzeug"><span>Gemini Live</span><span>Pipecat</span><span>sherpa-onnx</span><span>InsightFace</span><span>Qwen-Image-Edit</span><span>MiniMax H3</span><span>BiRefNet</span></p>
+    <p class="mehr"><a href="https://github.com/PDCem/minik">Minik on GitHub</a></p>
+  </div>
+  <ul class="kann drei">
+    <li><strong>Listening and speaking</strong>He detects the wake word “Minik” locally, then talks freely via Gemini Live without delay. His mouth moves live with his voice.</li>
+    <li><strong>Seeing and recognizing</strong>Faces in 0.15 seconds, voices even with several people in the room, gestures like waving or thumbs up, and the cat as well.</li>
+    <li><strong>A memory</strong>One file per person, only a short pointer in his head. If something is missing, he asks. At night he reads the day's conversations and learns from them.</li>
+    <li><strong>Everyday life</strong>News from Germany and Turkey, weather from the German Weather Service, appointments, notes, timers and pulse via the camera.</li>
+    <li><strong>Privacy</strong>He stores nothing from his surroundings. Only what starts with his name goes to Gemini. App closed means Minik off.</li>
+    <li><strong>The character</strong>Every clip is made locally on my own graphics card: costume, video with fixed first and last frame, cut out, hologram look via my own script. That way every clip flows seamlessly into the next.</li>
+  </ul>
+  <h3 class="reihe">Scenes <span>At rest he switches randomly; on request he plays them.</span></h3>
+  <div class="holos">
+    <figure class="holo"><video muted loop playsinline preload="none" data-auto poster="../medien/minik/minik_idle_dj.jpg" aria-label="Minik: At the mixing desk"><source src="../medien/minik/minik_idle_dj.mp4" type="video/mp4"></video><figcaption>At the mixing desk</figcaption></figure>
+    <figure class="holo"><video muted loop playsinline preload="none" data-auto poster="../medien/minik/minik_idle_astronaut.jpg" aria-label="Minik: Weightless"><source src="../medien/minik/minik_idle_astronaut.mp4" type="video/mp4"></video><figcaption>Weightless</figcaption></figure>
+    <figure class="holo"><video muted loop playsinline preload="none" data-auto poster="../medien/minik/minik_idle_held.jpg" aria-label="Minik: Little hero"><source src="../medien/minik/minik_idle_held.mp4" type="video/mp4"></video><figcaption>Little hero</figcaption></figure>
+    <figure class="holo"><video muted loop playsinline preload="none" data-auto poster="../medien/minik/minik_idle_zauberer.jpg" aria-label="Minik: The wizard"><source src="../medien/minik/minik_idle_zauberer.mp4" type="video/mp4"></video><figcaption>The wizard</figcaption></figure>
+    <figure class="holo"><video muted loop playsinline preload="none" data-auto poster="../medien/minik/minik_idle_rockstar.jpg" aria-label="Minik: Rock star"><source src="../medien/minik/minik_idle_rockstar.mp4" type="video/mp4"></video><figcaption>Rock star</figcaption></figure>
+    <figure class="holo"><video muted loop playsinline preload="none" data-auto poster="../medien/minik/minik_idle_licht.jpg" aria-label="Minik: A light in his hand"><source src="../medien/minik/minik_idle_licht.mp4" type="video/mp4"></video><figcaption>A light in his hand</figcaption></figure>
+    <figure class="holo"><video muted loop playsinline preload="none" data-auto poster="../medien/minik/minik_idle_zwinkern.jpg" aria-label="Minik: Winking"><source src="../medien/minik/minik_idle_zwinkern.mp4" type="video/mp4"></video><figcaption>Winking</figcaption></figure>
+    <figure class="holo"><video muted loop playsinline preload="none" data-auto poster="../medien/minik/minik_lachen.jpg" aria-label="Minik: Laughing"><source src="../medien/minik/minik_lachen.mp4" type="video/mp4"></video><figcaption>Laughing</figcaption></figure>
+  </div>
+  <h3 class="reihe">Dances <span>On request, each with a real song.</span></h3>
+  <div class="holos">
+    <figure class="holo"><video muted loop playsinline preload="none" data-auto poster="../medien/minik/minik_tanz_hiphop1.jpg" aria-label="Minik: Hip-hop"><source src="../medien/minik/minik_tanz_hiphop1.mp4" type="video/mp4"></video><figcaption>Hip-hop</figcaption></figure>
+    <figure class="holo"><video muted loop playsinline preload="none" data-auto poster="../medien/minik/minik_tanz_hiphop2.jpg" aria-label="Minik: Hip-hop, round two"><source src="../medien/minik/minik_tanz_hiphop2.mp4" type="video/mp4"></video><figcaption>Hip-hop, round two</figcaption></figure>
+    <figure class="holo"><video muted loop playsinline preload="none" data-auto poster="../medien/minik/minik_tanz_tiktok.jpg" aria-label="Minik: TikTok"><source src="../medien/minik/minik_tanz_tiktok.mp4" type="video/mp4"></video><figcaption>TikTok</figcaption></figure>
+    <figure class="holo"><video muted loop playsinline preload="none" data-auto poster="../medien/minik/minik_tanz_horon.jpg" aria-label="Minik: Horon"><source src="../medien/minik/minik_tanz_horon.mp4" type="video/mp4"></video><figcaption>Horon</figcaption></figure>
+    <figure class="holo"><video muted loop playsinline preload="none" data-auto poster="../medien/minik/minik_tanz_bauchtanz.jpg" aria-label="Minik: Belly dance"><source src="../medien/minik/minik_tanz_bauchtanz.mp4" type="video/mp4"></video><figcaption>Belly dance</figcaption></figure>
+    <figure class="holo"><video muted loop playsinline preload="none" data-auto poster="../medien/minik/minik_tanz_breakdance.jpg" aria-label="Minik: Breakdance"><source src="../medien/minik/minik_tanz_breakdance.mp4" type="video/mp4"></video><figcaption>Breakdance</figcaption></figure>
+    <figure class="holo"><video muted loop playsinline preload="none" data-auto poster="../medien/minik/minik_tanz_roboter.jpg" aria-label="Minik: Robot dance"><source src="../medien/minik/minik_tanz_roboter.mp4" type="video/mp4"></video><figcaption>Robot dance</figcaption></figure>
+  </div>
+  <h3 class="reihe">Day and night</h3>
+  <div class="holos">
+    <figure class="holo"><video muted loop playsinline preload="none" data-auto poster="../medien/minik/minik_winken.jpg" aria-label="Minik: Waves back"><source src="../medien/minik/minik_winken.mp4" type="video/mp4"></video><figcaption>Waves back</figcaption></figure>
+    <figure class="holo"><video muted loop playsinline preload="none" data-auto poster="../medien/minik/minik_zuhoeren.jpg" aria-label="Minik: Listening"><source src="../medien/minik/minik_zuhoeren.mp4" type="video/mp4"></video><figcaption>Listening</figcaption></figure>
+    <figure class="holo"><video muted loop playsinline preload="none" data-auto poster="../medien/minik/minik_einschlafen.jpg" aria-label="Minik: Sleepy"><source src="../medien/minik/minik_einschlafen.mp4" type="video/mp4"></video><figcaption>Sleepy</figcaption></figure>
+    <figure class="holo"><video muted loop playsinline preload="none" data-auto poster="../medien/minik/minik_schlafen.jpg" aria-label="Minik: Asleep in bed"><source src="../medien/minik/minik_schlafen.mp4" type="video/mp4"></video><figcaption>Asleep in bed</figcaption></figure>
+  </div>
+</section>
+
+<section id="kaan">
+  <div class="kopf">
+    <h2>K.A.A.N., the house manager</h2>
+    <p>A Jarvis for the living room, on the iPad too. You talk to him, he recognizes speech locally and answers with a voice. On the side he keeps an eye on the whole house.</p>
+    <p class="werkzeug"><span>Whisper</span><span>text-to-speech</span><span>UniFi API</span><span>Proxmox API</span><span>nginx</span></p>
+  </div>
+  <ul class="kann">
+    <li><strong>Internet</strong>Line, ping, throughput and data usage of the month</li>
+    <li><strong>Second router</strong>Devices, VPN location, load and temperature</li>
+    <li><strong>Servers</strong>CPU, RAM and disk of both Proxmox servers with all guests</li>
+    <li><strong>Agents</strong>Every agent and every workbench with status and load</li>
+    <li><strong>Smart home</strong>Dim lights, TV on and off, YouTube to the TV</li>
+    <li><strong>Radio</strong>35 Turkish and German stations, ready to play</li>
+    <li><strong>Weather and sky</strong>Five-day forecast, sunrise and sunset, moon phase</li>
+    <li><strong>Reminders</strong>Appointments and family occasions, notes from the agents such as the morning brief</li>
+    <li><strong>Ticker</strong>News in German and Turkish, lira exchange rate and gold price</li>
+    <li><strong>Vector</strong>The little robot is connected and can be opened from here</li>
+  </ul>
+  <figure class="schirm"><button class="zoom" aria-label="Show large"><img src="../medien/shots/kaan.png" alt="K.A.A.N. interface with network, Proxmox load, weather, smart home and radio" loading="lazy" width="1440" height="900"></button></figure>
+</section>
+
+<section id="health">
+  <div class="kopf">
+    <h2>Health Monitor</h2>
+    <p>Smartwatch and phone send their data to my own server. The result is a personal health dashboard with sleep, steps and heart rate.</p>
+    <p class="werkzeug"><span>Android</span><span>Wear OS</span><span>web dashboard</span></p>
+  </div>
+  <figure class="schirm"><button class="zoom" aria-label="Show large"><img src="../medien/shots/health.png" alt="Health Monitor with body model, sleep phases and steps of the last 30 days" loading="lazy" width="1440" height="900"></button></figure>
+</section>
+
+<section id="aibroker">
+  <div class="kopf">
+    <h2>AI Broker</h2>
+    <p>A research board for crypto, stocks, ETFs and Turkish securities. Every night a team of roles rates each asset and justifies its verdict: market situation, opportunities, warnings and its own hit rate. A public part runs as a practice portfolio with real prices and its own login. Explicitly not investment advice.</p>
+    <p class="werkzeug"><span>Python</span><span>Codex</span><span>headless browser</span><span>Cron</span><span>Supabase</span></p>
+  </div>
+  <figure class="schirm"><button class="zoom" aria-label="Show large"><img src="../medien/shots/aibroker-dunkel.png" alt="AI Broker overview with fear and greed index, altcoin season, market breadth and leading indices" loading="lazy" width="1440" height="900"></button></figure>
+</section>
+
+<section id="web">
+  <div class="kopf">
+    <h2>Built for the web</h2>
+    <p>Two sites that run publicly. The <strong>learning platform</strong> was made for exam preparation in the family: three subjects with more than 300 exercises, cheat sheets and a mock exam, no account needed. Plus my <strong>application profile</strong> with career history and projects.</p>
+    <p class="werkzeug"><span>Astro</span><span>Vercel</span></p>
+  </div>
+  <div class="paar">
+    <figure class="schirm"><button class="zoom" aria-label="Show large"><img src="../medien/shots/lernplattform-2.png" alt="Learning platform Mathematics 1 with progress, chapters and quizzes" loading="lazy" width="1440" height="900"></button>
+      <figcaption>Learning platform, here Mathematics 1</figcaption></figure>
+    <figure class="schirm"><button class="zoom" aria-label="Show large"><img src="../medien/shots/profil.png" alt="Application profile of Cem Cumali with photo and key figures" loading="lazy" width="1440" height="900"></button>
+      <figcaption><a href="https://profilcem.vercel.app">Application profile</a></figcaption></figure>
+  </div>
+</section>
+
+<section id="werkstatt">
+  <div class="kopf">
+    <h2>From my <span style="white-space:nowrap">AI workshop</span></h2>
+    <p>The city, the portraits and the device images are made on my own AI PC with local image and video models. There is a separate image for every time of day, plus short events that play in the Control Center.</p>
+    <p class="werkzeug"><span>ComfyUI</span><span>Qwen Image</span><span>local video models</span><span>own GPU</span></p>
+  </div>
+  <div class="zeiten">
+    <div class="bild" id="zeitbild">
+      <img src="../medien/stadt/morgen.webp" alt="The city in the morning" data-z="morgen" loading="lazy">
+      <img src="../medien/stadt/tag.webp" alt="The city by day" data-z="tag" loading="lazy">
+      <img src="../medien/stadt/abend.webp" alt="The city in the evening" data-z="abend" loading="lazy" class="an">
+      <img src="../medien/stadt/nacht.webp" alt="The city at night" data-z="nacht" loading="lazy">
+    </div>
+    <div class="wahl" role="group" aria-label="Time of day">
+      <button data-z="morgen" aria-pressed="false">Morning</button>
+      <button data-z="tag" aria-pressed="false">Day</button>
+      <button data-z="abend" aria-pressed="true">Evening</button>
+      <button data-z="nacht" aria-pressed="false">Night</button>
+    </div>
+  </div>
+  <div class="ereignisse">
+    <figure><video muted loop playsinline preload="none" poster="../medien/stadt/nacht.webp" data-auto><source src="../medien/stadt/ereignis_schiff_nacht.mp4" type="video/mp4"></video><figcaption>A ship comes in</figcaption></figure>
+    <figure><video muted loop playsinline preload="none" poster="../medien/stadt/nacht.webp" data-auto><source src="../medien/stadt/ereignis_feuerwerk_nacht.mp4" type="video/mp4"></video><figcaption>Fireworks</figcaption></figure>
+    <figure><video muted loop playsinline preload="none" poster="../medien/stadt/abend.webp" data-auto><source src="../medien/stadt/ereignis_gewitter_abend.mp4" type="video/mp4"></video><figcaption>Thunderstorm</figcaption></figure>
+  </div>
+</section>
+
+<section id="llm">
+  <div class="kopf">
+    <h2>Language models in my own house</h2>
+    <p>The agents work with cloud models. In case a provider goes down or a limit kicks in, <strong>my own models are ready as a backup</strong> on the AI PC. They run behind an interface the agents already know. One chat agent once ran fully local as a test, including tool calls.</p>
+    <p class="werkzeug"><span>llama.cpp, built myself for CUDA</span><span>GGUF quantization</span><span>OpenAI-compatible API</span><span>RTX 4070, 12 GB</span></p>
+  </div>
+  <ul class="kann">
+    <li><strong>Qwen 3.6 · 35B (MoE)</strong>Runs as the backup server: reads a good 2,000 tokens per second and writes around 55 per second, tool calls verified.</li>
+    <li><strong>Qwen 3.8 · 27B</strong>Benchmarked in three sizes from 9 to 17 GB, with and without multi-token prediction.</li>
+    <li><strong>Bonsai 2 · 27B</strong>Second backup server with 64,000 tokens of context, tuned for fast reading of long agent prompts.</li>
+    <li><strong>Xing 4.0 · 29B</strong>New coding model, made to run with my own llama.cpp branch a few days after release.</li>
+    <li><strong>Qwen 3.8 Flash-Next</strong>A 2-bit giant of more than 60 GB: it runs, but shows where the CPU becomes the bottleneck.</li>
+    <li><strong>What stuck</strong>Multi-token prediction only pays off when the model doesn't fully fit on the card: plus 27 percent for the big one, minus 40 percent for the small one.</li>
+  </ul>
+</section>
+
+<section id="weitere">
+  <div class="kopf">
+    <h2>And also</h2>
+    <p>Everything else I have built or run.</p>
+  </div>
+  <div class="weitere">
+    <div><h3>“Infra” app</h3><p>Android app I use to talk to the admin agent by voice: switch the house, today's status, questions to the homelab.</p></div>
+    <div><h3>Cradle and hospital</h3><p>New agents are born with a single start command from a shared template. If one falls ill, it is admitted to the hospital automatically and treated.</p></div>
+    <div><h3>Lost and found</h3><p>Collects new AI models for text, image, video and voice every day. Before picking any model, the agents look here first.</p></div>
+    <div><h3>Self-check and bug log</h3><p>More than 40 automatic checks across the whole platform. Every fixed bug goes into the bug log and gets a regression test, so it never comes back.</p></div>
+    <div><h3>Own web search</h3><p>A headless browser as a search and reading service for all agents, instead of third-party search APIs.</p></div>
+    <div><h3>Minga AI</h3><p>Company website <a href="https://minga-ai.de">minga-ai.de</a> with real customers, built with Astro and Tailwind.</p></div>
+    <div><h3>Çizgi Bilgisayar</h3><p>Turkish website for a friend's computer and Apple service in Kuşadası, with a system planner and its own laptop film.</p></div>
+    <div><h3>Integra Çalışma Alanı</h3><p>Work platform for an electrical engineering company in Antalya: staff and two AI agents work together, entirely in Turkish.</p></div>
+    <div><h3>Technical drawings for a glazier</h3><p>Hand sketches become production drawings with drilling plan and CNC file (DXF and DWG), following a fixed review scheme.</p></div>
+    <div><h3>Project store</h3><p>Every project lives in one place. A coding agent borrows it, builds and returns it, all with history.</p></div>
+    <div><h3>Sofa Remote</h3><p>Android remote for MacBook and Mac mini: mouse, keyboard, media and timer from the sofa.</p></div>
+    <div><h3>AI gateway</h3><p>One access point for all language models, with a fixed ranking, automatic fallback and limits per agent.</p></div>
+    <div><h3>Career assistant</h3><p>Rates new job emails every morning and maintains an application dashboard.</p></div>
+    <div><h3>Morning brief</h3><p>The scout sends the status of all projects to my phone every morning, and new ideas on Sundays.</p></div>
+    <div><h3>Health record</h3><p>Digital health record for a family member. Findings arrive automatically from scanned documents.</p></div>
+    <div><h3>Scan sorting</h3><p>Paper into the scanner, done: recognized, assigned to the right person, filed in the right archive.</p></div>
+    <div><h3>Vector robot</h3><p>An Anki Vector with open firmware and its own speech server instead of the manufacturer's shut-down cloud. Understands German and Turkish, knows the family, and “Hey Vector, Infra …” asks the admin agent directly.</p></div>
+    <div><h3>Nöbet Çizelgesi</h3><p>Duty roster for a primary school in Turkey: Turkish interface, export as PDF and Excel.</p></div>
+    <div><h3>World Cup prediction game 2026</h3><p>Bilingual prediction game for the family, played all the way to the final.</p></div>
+    <div><h3>Mayrah IPTV</h3><p>Android TV app with Turkish and German channels from my own channel lists.</p></div>
+    <div><h3>OpenTier+</h3><p>Android app that talks to the e-scooter directly via Bluetooth after the manufacturer went bust.</p></div>
+    <div><h3>HIZIR</h3><p>Voice assistant on the Mac mini, backed up and archived.</p></div>
+    <div><h3>Own image model</h3><p>A LoRA trained on my own photos, in four versions, so images featuring me are possible.</p></div>
+    <div><h3>Model benchmark</h3><p>The tinkerer measures which free models are good for which tasks, from easy to hard.</p></div>
+    <div><h3>Telegram bridge</h3><p>Controls the coding agent via Telegram: write a task, and the answer builds up live in the message.</p></div>
+    <div><h3>One prompt for all</h3><p>A shared master prompt for all agents, rolled out by script: change it once, up to date everywhere.</p></div>
+    <div><h3>Mac setup</h3><p>Inventory of all apps including package names, so the Mac is back up quickly after a reinstall.</p></div>
+    <div><h3>One-click templates</h3><p>Ready-made ComfyUI workflows for image, editing, upscaling and video, so you don't need a forest of switches every time.</p></div>
+    <div><h3>Armor LoRA</h3><p>A custom image model for Ottoman lamellar armor, so every plate and every chain ring is right.</p></div>
+    <div><h3>Cibiti Amca</h3><p>An original satire character, a Turkish uncle with an opinion on everything. Still in the concept phase.</p></div>
+    <div><h3>Drone missions</h3><p>Research into how a DJI Mini 2 can fly simple missions from the phone: out, photo, back, land.</p></div>
+    <div><h3>AI PC</h3><p>Gaming PC with an RTX 4070: Windows for gaming, Linux for local image, video and language models.</p></div>
+    <div><h3>Self-hosted services</h3><p>Photos, films, notes, bookmarks, documents and meta search run self-hosted instead of in someone else's cloud.</p></div>
+    <div><h3>Homelab</h3><p>Two Proxmox servers with more than 30 containers and 4 VMs, separate VLANs. Updates and backups run automatically, maintained by an admin agent.</p></div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <p class="ende">Everything runs at my home. I like to show it live best.</p>
+  <p>Code and data are private because they contain real family data. In a conversation I am happy to show every corner.</p>
+  <nav><a href="mailto:cemcumali@gmail.com">cemcumali@gmail.com</a><a href="https://www.linkedin.com/in/cem-cumali-789a01101/">LinkedIn</a><a href="https://github.com/PDCem">GitHub</a></nav>
+  <small>All images and clips on this page come from my own systems.</small>
+</footer>
+
+<dialog id="gross"><img alt=""></dialog>
+
+<script src="../seite.js?v=3"></script>
+</body>
+</html>
